@@ -1,14 +1,19 @@
-<img src="/gradients/Meshgrad-blue.png" alt="" width="100" height="100" class="blurred-image" />
+<script>
+    export let customStyles = {};
+</script>
+
+<img src="/gradients/Meshgrad-blue.png" alt="" width="100" height="100" class="blurred-image" style="{customStyles}"/>
 
  
 <style>
     .blurred-image {
         position: absolute;
-        width: 607px;
-        height: 607px;
-        filter: blur(300px) brightness(1.4);
+        background-color: rgb(45, 52, 58);
+        width: 300px;
+        height: 300px;
+        filter: blur(100px) brightness(1.4);
         opacity: 0.8;
-        z-index: 1;
+        z-index: 0;
     }
 
     .blurred-image::before {
