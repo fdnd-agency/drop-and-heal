@@ -1,38 +1,58 @@
-# create-svelte
+# Drop and Heal
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+<img width="922" alt="image" src="https://github.com/user-attachments/assets/809e5bc1-bce6-4da0-9167-6a2be1458b77" />
 
-## Creating a project
+## Table of Contents
+- [Description](#description)
+- [Live link](#live-link)
+- [Techniques](#techniques)
+- [Installation and Usage](#installation-and-usage)
+- [Links](#links)
+- [Resources](#resources)
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Description
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+Grief is a deeply personal and often complex experience that varies from person to person. The Drop & Heal aims to provide a personalized support program for the young adults who have experienced grief. By using an analysis, the program adapts to the unique needs of every user, and can identify the specific grief task the user is in and provide the desired help.
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+The goal of this project was to create a web application for Drop & Heal with a user-friendly, responsive, and empathetic front-end at its core. It should be intuitive and accessible for young adults who are in different stages of grief. The interface should seamlessly connect to the emotional and functional needs of the users during their personal grieving process. 
 
-## Developing
+## Live link
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+https://dry-drop-and-heal.vercel.app/
 
-```bash
-npm run dev
+## Techniques 
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+The website was built using the following technologies:
 
-## Building
+- **HTML** – For the structure of the website
+- **CSS** – For the styling
+- **JavaScript** – For interactive functionalities
+- **SvelteKit** – To set up a Svelte-based framework
+- **Vercel** - for website deployment
+- **Directus** – Used as a headless CMS 
+- **GitHub** – For working on project as a team
+- **Atomic design** – Library structure
+- **Progressive Enhancement** - coding stragedy
+- 
+  
+## Installation and usage
 
-To create a production version of your app:
+Follow the steps below to use this project locally:
 
-```bash
-npm run build
-```
 
-You can preview the production build with `npm run preview`.
+1. Install node js
+2. Clone the repository
+3. Open the repository in a code editor (for example, VSCode)
+4. Open the terminal and navigate to the project folder
+5. Type command npm install
+6. Type command npm run dev
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+You can now work on the project on locally. 
+
+## Links
+Link to Project Board;
+Link to code conventions;
+
+## Resources
+
+Design in Figma:  https://github.com/fdnd-agency/drop-and-heal/tree/main/design
