@@ -50,9 +50,9 @@ Follow the steps below to use this project locally:
 You can now work on the project on locally. 
 
 ## Links
-Link to Project Board;
-Link to code conventions;
+Link to Project Board: https://github.com/orgs/fdnd-agency/projects/37;
+Link to code conventions: https://github.com/orgs/fdnd-agency/projects/37/views/1?filterQuery=conventi&pane=issue&itemId=80747990&issue=fdnd-agency%7Cdrop-and-heal%7C2;
 
 ## Resources
 
-Design in Figma:  https://github.com/fdnd-agency/drop-and-heal/tree/main/design
+Design:  https://github.com/fdnd-agency/drop-and-heal/tree/main/design
