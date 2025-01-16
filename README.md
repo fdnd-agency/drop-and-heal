@@ -33,7 +33,7 @@ The website was built using the following technologies:
 - **GitHub** – For working on project as a team
 - **Atomic design** – Library structure
 - **Progressive Enhancement** - coding stragedy
-- 
+  
   
 ## Installation and usage
 
