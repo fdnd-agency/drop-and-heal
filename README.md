@@ -3,22 +3,26 @@
 <img width="922" alt="image" src="https://github.com/user-attachments/assets/809e5bc1-bce6-4da0-9167-6a2be1458b77" />
 
 ## Table of Contents
-- [Description](#description)
+- [Description](#about)
 - [Live link](#live-link)
+- [Team](#team)
 - [Techniques](#techniques)
 - [Installation and Usage](#installation-and-usage)
 - [Links](#links)
 - [Resources](#resources)
 
-## Description
+## About
 
 Grief is a deeply personal and often complex experience that varies from person to person. The Drop & Heal aims to provide a personalized support program for the young adults who have experienced grief. By using an analysis, the program adapts to the unique needs of every user, and can identify the specific grief task the user is in and provide the desired help.
 
 The goal of this project was to create a web application for Drop & Heal with a user-friendly, responsive, and empathetic front-end at its core. It should be intuitive and accessible for young adults who are in different stages of grief. The interface should seamlessly connect to the emotional and functional needs of the users during their personal grieving process. 
 
-## Live link
+### Live link
 
 https://dry-drop-and-heal.vercel.app/
+
+### Team
+Our team consists of three students: Alisa, Lisa and Yassir. 
 
 ## Techniques 
 
