@@ -22,7 +22,7 @@ The goal of this project was to create a web application for Drop & Heal with a 
 https://dry-drop-and-heal.vercel.app/
 
 ### Team
-Our team consists of three students: Alisa, Lisa and Yassir. 
+Our team consists of three students: [Alisa](https://github.com/aliceafanasieva) , [Lisa](https://github.com/lisavanmansom) and [Yassir](https://github.com/yassirog). 
 
 ## Techniques 
 
