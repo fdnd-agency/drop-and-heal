@@ -22,7 +22,11 @@ The goal of this project was to create a web application for Drop & Heal with a 
 https://dry-drop-and-heal.vercel.app/
 
 ### Team
-Our team consists of three students: [Alisa](https://github.com/aliceafanasieva) , [Lisa](https://github.com/lisavanmansom) and [Yassir](https://github.com/yassirog). 
+* Alisa - _developer_ - [Github](https://github.com/aliceafanasieva)
+
+* Lisa - _developer_ - [Github](https://github.com/lisavanmansom)
+
+* Yassir - _developer_ - [Github](https://github.com/yassirog)
 
 ## Techniques 
 
@@ -43,13 +47,22 @@ The website was built using the following technologies:
 
 Follow the steps below to use this project locally:
 
+1. Install node js:
+   
+```npm install```
+2. Clone the repository:
+   
+```git clone https://github.com/lisavanmansom/dry-drop-and-heal.git```
 
-1. Install node js
-2. Clone the repository
-3. Open the repository in a code editor (for example, VSCode)
-4. Open the terminal and navigate to the project folder
-5. Type command npm install
-6. Type command npm run dev
+3. Open the repository in a code editor (for example, VSCode).
+4. Open the terminal and navigate to the project folder.
+5. Type command:
+   
+```npm install```
+
+6. Type command:
+    
+```npm run dev```
 
 You can now work on the project on locally. 
 
