@@ -23,19 +23,19 @@
   </button>
 
   <div class="navigation-items {isMenuOpen ? 'open' : ''}">
-    <a href="multiple-task-1" class="item">
+    <a href="multiple-task-1" class="multiple-tasks">
       <img src="/icon/rouwtaak-1.png" alt="waterdrop gradient">
       Het verlies aanvaarden
     </a>
-    <a href="multiple-task-2" class="item">
+    <a href="multiple-task-2" class="multiple-tasks">
       <img src="/icon/rouwtaak-2.png" alt="lightning gradient">
       De pijn doorvoelen
     </a>
-    <a href="multiple-task-3" class="item">
+    <a href="multiple-task-3" class="multiple-tasks">
       <img src="/icon/rouwtaak-3.png" alt="swirl gradient">
       Verder in verandering
     </a>
-    <a href="multiple-task-4" class="item">
+    <a href="multiple-task-4" class="multiple-tasks">
       <img src="/icon/rouwtaak-4.png" alt="flower gradient">
       Emotioneel verder
     </a>
@@ -125,7 +125,7 @@
     display: flex;
   }
 
-  .item {
+  .multiple-tasks {
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -139,7 +139,7 @@
     border-radius: 5px; 
   }
 
-  .item img {
+  .multiple-tasks img {
     width: 50px;
     height: 50px;
     background-color: #1F1F1F;
@@ -148,7 +148,7 @@
     margin-bottom: 10px; 
   }
 
-  .item:hover {
+  .multiple-tasks:hover {
     scale: 1.1;
   }
 
@@ -176,13 +176,13 @@
       display: flex;
     }
 
-    .navigation-items .item {
+    .navigation-items .multiple-tasks {
       margin: 1em 0;
       width: 100%;
       text-align: left;
     }
 
-    .navigation-items.open .item {
+    .navigation-items.open .multiple-tasks {
       border: 2px solid var(--border-color);
     }
   }
@@ -193,7 +193,7 @@
       flex-wrap: wrap;
     }
 
-    .item {
+    .multiple-tasks {
       margin: 0 1em;
       flex-direction: column;
       max-width: 10ch;
