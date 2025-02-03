@@ -24,19 +24,19 @@
 
   <div class="navigation-items {isMenuOpen ? 'open' : ''}">
     <a href="multiple-task-1" class="item">
-      <img src="/icon/rouwtaak-1.png" alt="">
+      <img src="/icon/rouwtaak-1.png" alt="waterdrop gradient">
       Het verlies aanvaarden
     </a>
     <a href="multiple-task-2" class="item">
-      <img src="/icon/rouwtaak-2.png" alt="">
+      <img src="/icon/rouwtaak-2.png" alt="lightning gradient">
       De pijn doorvoelen
     </a>
     <a href="multiple-task-3" class="item">
-      <img src="/icon/rouwtaak-3.png" alt="">
+      <img src="/icon/rouwtaak-3.png" alt="swirl gradient">
       Verder in verandering
     </a>
     <a href="multiple-task-4" class="item">
-      <img src="/icon/rouwtaak-4.png" alt="">
+      <img src="/icon/rouwtaak-4.png" alt="flower gradient">
       Emotioneel verder
     </a>
   </div>
