@@ -152,10 +152,10 @@
     scale: 1.1;
   }
 
-  /* Mobile - Hamburger Menu */
   @media (max-width: 1200px) {
     .hamburger {
       display: block;
+      z-index: 15;
     }
 
     .navigation-items {
@@ -166,7 +166,7 @@
       background-color: var(--b);
       padding: 1em;
       position: absolute;
-      top: 70px;
+      top: 20px;
       left: 0;
       z-index: 10;
       margin: 0;
