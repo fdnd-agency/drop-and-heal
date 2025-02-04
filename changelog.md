@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [Unreleased] 2023-02-03
+## [Unreleased] 2025-02-03
 ### Added
 - Nothing added
 
@@ -11,3 +11,16 @@ All notable changes to this project will be documented in this file.
 
 ### Fixed
 - Fixed mobile menu so that the menu stays consistent. (better UI)
+
+## [Unreleased] 2025-02-04
+### Added
+- Toggle icon mobile menu
+
+### Changed
+- CSS: Refactored, now using CSS Nesting on menu
+- HTML: Refactored, now using right elements
+- HTML: Refactored, now more acessible 
+
+### Fixed
+Nothing fixed today
+
