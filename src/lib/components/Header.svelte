@@ -19,7 +19,11 @@
   </div>
 
   <button class="hamburger" on:click={toggleMenu}>
-    &#9776;
+    {#if isMenuOpen}
+        &#10005;
+    {:else}
+       &#9776;
+    {/if}
   </button>
 
   <div class="navigation-items {isMenuOpen ? 'open' : ''}">
@@ -102,7 +106,6 @@
     background-color: var(--progress-color);
   }
 
-  /* Hamburger button */
   .hamburger {
     display: none;
     background: none;
