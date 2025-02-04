@@ -63,50 +63,44 @@
     margin-bottom: 1em;
     margin: 0em;
     position: relative;
-  }
-
-  .header {
     display: flex;
     margin-left: auto;
     justify-content: space-between;
     align-items: center;
-  }
 
-  .title {
-    margin: 1em;
-  }
+    .title {
+     margin: 1em;
+    
+      .title-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
 
-  .title-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-  }
+        h1 {
+          font-family: Calvino;
+          margin: 0;
+          font-size: 2em;
+          max-width: none;
+        }
+      }
+      progress {
+        width: 55%;
+        height: 2px;
+        margin-top: 1em;
+        appearance: none;
 
-  .title-row h1 {
-    font-family: Calvino;
-    margin: 0;
-    font-size: 2em;
-    max-width: none;
-  }
+        &::-webkit-progress-bar {
+          background-color: var(--g);
+          border-radius: 5px;
+        }
+        &::-webkit-progress-value {
+          background-color: var(--progress-color);
+          }
+      }
+    }
 
-  progress {
-    width: 55%;
-    height: 2px;
-    margin-top: 1em;
-    appearance: none;
-  }
-
-  progress::-webkit-progress-bar {
-    background-color: var(--g);
-    border-radius: 5px;
-  }
-
-  progress::-webkit-progress-value {
-    background-color: var(--progress-color);
-  }
-
-  .hamburger {
+    .hamburger {
     display: none;
     background: none;
     border: none;
@@ -114,54 +108,21 @@
     font-size: 30px;
     cursor: pointer;
     margin-right: 1em;
-  }
 
-  .navigation-items {
+    @media (max-width: 1200px){
+      display: block;
+      z-index: 15;
+    }
+    }
+
+   .navigation-items {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     display: block;
-  }
 
-  .navigation-items.open {
-    display: flex;
-  }
-
-  .multiple-tasks {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    padding: 1em;
-    color: var(--w);
-    margin-right: 20px;
-    text-align: center;
-    flex-direction: column;
-    transition: 0.5s all;
-    border: 2px solid transparent;
-    border-radius: 5px; 
-  }
-
-  .multiple-tasks img {
-    width: 50px;
-    height: 50px;
-    background-color: #1F1F1F;
-    padding: 0.2em;
-    border-radius: 5px;
-    margin-bottom: 10px; 
-  }
-
-  .multiple-tasks:hover {
-    scale: 1.1;
-  }
-
-  @media (max-width: 1200px) {
-    .hamburger {
-      display: block;
-      z-index: 15;
-    }
-
-    .navigation-items {
+    @media (max-width: 1200px){
       display: none;
       flex-direction: column;
       align-items: flex-start;
@@ -175,31 +136,62 @@
       margin: 0;
     }
 
-    .navigation-items.open {
-      display: flex;
-    }
-
-    .navigation-items .multiple-tasks {
-      margin: 1em 0;
-      width: 100%;
-      text-align: left;
-    }
-
-    .navigation-items.open .multiple-tasks {
-      border: 2px solid var(--border-color);
-    }
-  }
-
-  @media (min-width: 1201px) {
-    .navigation-items {
+    @media (min-width: 1201px){
       display: flex;
       flex-wrap: wrap;
     }
 
+    &.open {
+    display: flex;
+
+      @media (max-width: 1200px){
+        display: flex;
+      }
+
+      .multiple-tasks {
+        @media (max-width: 1200px){
+          border: 2px solid var(--border-color);
+        }
+      }
+    }
+
     .multiple-tasks {
-      margin: 0 1em;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      padding: 1em;
+      color: var(--w);
+      margin-right: 20px;
+      text-align: center;
       flex-direction: column;
-      max-width: 10ch;
+      transition: 0.5s all;
+      border: 2px solid transparent;
+      border-radius: 5px; 
+
+      @media (max-width: 1200px){
+        margin: 1em 0;
+        width: 100%;
+        text-align: left;
+      }
+      @media (min-width: 1201px){
+        margin: 0 1em;
+        flex-direction: column;
+        max-width: 10ch;
+    }
+
+      img {
+        width: 50px;
+        height: 50px;
+        background-color: #1F1F1F;
+        padding: 0.2em;
+        border-radius: 5px;
+        margin-bottom: 10px; 
+      }
+
+      &:hover {
+        scale: 1.1;
+      }
+   }
     }
   }
 </style>
