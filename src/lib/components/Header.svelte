@@ -26,24 +26,34 @@
     {/if}
   </button>
 
-  <div class="navigation-items {isMenuOpen ? 'open' : ''}">
-    <a href="multiple-task-1" class="multiple-tasks">
-      <img src="/icon/rouwtaak-1.png" alt="waterdrop gradient">
-      Het verlies aanvaarden
-    </a>
-    <a href="multiple-task-2" class="multiple-tasks">
-      <img src="/icon/rouwtaak-2.png" alt="lightning gradient">
-      De pijn doorvoelen
-    </a>
-    <a href="multiple-task-3" class="multiple-tasks">
-      <img src="/icon/rouwtaak-3.png" alt="swirl gradient">
-      Verder in verandering
-    </a>
-    <a href="multiple-task-4" class="multiple-tasks">
-      <img src="/icon/rouwtaak-4.png" alt="flower gradient">
-      Emotioneel verder
-    </a>
-  </div>
+  <nav class="navigation-items {isMenuOpen ? 'open' : ''}">
+    <ul> 
+      <li>
+        <a href="multiple-task-1" class="multiple-tasks">
+          <img src="/icon/rouwtaak-1.png" alt="waterdrop gradient">
+          Het verlies aanvaarden
+        </a>
+      </li>
+      <li>
+        <a href="multiple-task-2" class="multiple-tasks">
+          <img src="/icon/rouwtaak-2.png" alt="lightning gradient">
+          De pijn doorvoelen
+        </a>
+      </li>
+      <li>
+        <a href="multiple-task-3" class="multiple-tasks">
+          <img src="/icon/rouwtaak-3.png" alt="swirl gradient">
+          Verder in verandering
+        </a>
+      </li>
+      <li>
+        <a href="multiple-task-4" class="multiple-tasks">
+          <img src="/icon/rouwtaak-4.png" alt="flower gradient">
+          Emotioneel verder
+        </a>
+      </li>
+  </ul> 
+  </nav>
 </header>
 
 <style>
@@ -116,11 +126,11 @@
     }
 
    .navigation-items {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    display: block;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      display: block;
 
     @media (max-width: 1200px){
       display: none;
@@ -142,7 +152,7 @@
     }
 
     &.open {
-    display: flex;
+      display: flex;
 
       @media (max-width: 1200px){
         display: flex;
@@ -155,43 +165,52 @@
       }
     }
 
-    .multiple-tasks {
+    ul {
+      list-style-type: none;
       display: flex;
-      align-items: center;
-      text-decoration: none;
-      padding: 1em;
-      color: var(--w);
-      margin-right: 20px;
-      text-align: center;
-      flex-direction: column;
-      transition: 0.5s all;
-      border: 2px solid transparent;
-      border-radius: 5px; 
 
-      @media (max-width: 1200px){
-        margin: 1em 0;
-        width: 100%;
-        text-align: left;
-      }
-      @media (min-width: 1201px){
-        margin: 0 1em;
-        flex-direction: column;
-        max-width: 10ch;
+    @media (max-width: 1200px){
+       display: block;
+       width: 100%;
     }
+      .multiple-tasks {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        padding: 1em;
+        color: var(--w);
+        margin-right: 20px;
+        text-align: center;
+        flex-direction: column;
+        transition: 0.5s all;
+        border: 2px solid transparent;
+        border-radius: 5px; 
 
-      img {
-        width: 50px;
-        height: 50px;
-        background-color: #1F1F1F;
-        padding: 0.2em;
-        border-radius: 5px;
-        margin-bottom: 10px; 
+        @media (max-width: 1200px){
+          margin: 1em 0;
+          width: 100%;
+          text-align: left;
+        }
+        @media (min-width: 1201px){
+          margin: 0 1em;
+          flex-direction: column;
+          max-width: 10ch;
       }
 
-      &:hover {
-        scale: 1.1;
+        img {
+          width: 50px;
+          height: 50px;
+          background-color: #1F1F1F;
+          padding: 0.2em;
+          border-radius: 5px;
+          margin-bottom: 10px; 
+        }
+
+        &:hover {
+          scale: 1.1;
+        }
       }
-   }
     }
   }
+}
 </style>
