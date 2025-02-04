@@ -15,10 +15,13 @@
     <div class="title-row">
       <h1>{title}</h1>
     </div>
-    <progress value={progressValue} max="100" style="--progress-color: {progressColor}"></progress>
+    <progress value={progressValue} max="100" style="--progress-color: {progressColor}" aria-label="Task progress"></progress>
   </div>
 
-  <button class="hamburger" on:click={toggleMenu}>
+  <button class="hamburger" 
+    on:click={toggleMenu} 
+    aria-label={isMenuOpen ? "Close menu" : "Open menu"} 
+    aria-expanded={isMenuOpen ? "true" : "false"}>
     {#if isMenuOpen}
         &#10005;
     {:else}
@@ -26,7 +29,7 @@
     {/if}
   </button>
 
-  <nav class="navigation-items {isMenuOpen ? 'open' : ''}">
+  <nav class="navigation-items {isMenuOpen ? 'open' : ''}" aria-labelledby="menu" >
     <ul> 
       <li>
         <a href="multiple-task-1" class="multiple-tasks">
@@ -111,18 +114,22 @@
     }
 
     .hamburger {
-    display: none;
-    background: none;
-    border: none;
-    color: var(--w);
-    font-size: 30px;
-    cursor: pointer;
-    margin-right: 1em;
+      display: none;
+      background: none;
+      border: none;
+      color: var(--w);
+      font-size: 30px;
+      cursor: pointer;
+      margin-right: 1em;
 
     @media (max-width: 1200px){
       display: block;
       z-index: 15;
     }
+    &:focus {
+        outline: 2px solid var(--w);
+        outline-offset: 2px;
+      }
     }
 
    .navigation-items {
