@@ -24,3 +24,15 @@ All notable changes to this project will be documented in this file.
 ### Fixed
 Nothing fixed today
 
+## [Unreleased] 2025-02-05
+### Added
+- Nothing changed
+
+### Changed
+- CSS: Refactored, media queries changed into container queries
+- CSS: Refactored, Psuedo-private custom css
+
+### Fixed
+Nothing fixed today
+
+
