@@ -69,10 +69,11 @@
   }
 
   header {
+    --_border-color: var(--border-color, #1F1F1F);
     background-color: var(--b);
     width: 100%;
     color: var(--w);
-    border-bottom: 2px solid var(--border-color);
+    border-bottom: 2px solid var(--_border-color);
     margin-bottom: 1em;
     margin: 0em;
     position: relative;
