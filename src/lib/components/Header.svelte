@@ -120,7 +120,7 @@
       background: none;
       border: none;
       color: var(--w);
-      font-size: 30px;
+      font-size: 1.875em;
       cursor: pointer;
       margin-right: 1em;
 
@@ -149,7 +149,7 @@
       background-color: var(--b);
       padding: 1em;
       position: absolute;
-      top: 20px;
+      top: 1.25em;
       left: 0;
       z-index: 10;
       margin: 0;
@@ -190,7 +190,7 @@
         text-decoration: none;
         padding: 1em;
         color: var(--w);
-        margin-right: 20px;
+        margin-right: 1.25em;
         text-align: center;
         flex-direction: column;
         transition: 0.5s all;
@@ -209,12 +209,12 @@
       }
 
         img {
-          width: 50px;
-          height: 50px;
+          width: 3.125em;
+          height: 3.125em;
           background-color: #1F1F1F;
           padding: 0.2em;
           border-radius: 5px;
-          margin-bottom: 10px; 
+          margin-bottom: 0.625em; 
         }
 
         &:hover {
