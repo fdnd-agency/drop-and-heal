@@ -33,25 +33,25 @@
     <ul> 
       <li>
         <a href="multiple-task-1" class="multiple-tasks">
-          <img src="/icon/rouwtaak-1.png" alt="waterdrop gradient">
+          <img src="/icon/rouwtaak-1.png" alt="Task 1: Accepting Loss icon">
           Het verlies aanvaarden
         </a>
       </li>
       <li>
         <a href="multiple-task-2" class="multiple-tasks">
-          <img src="/icon/rouwtaak-2.png" alt="lightning gradient">
+          <img src="/icon/rouwtaak-2.png" alt="Task 2: Feeling Pain icon">
           De pijn doorvoelen
         </a>
       </li>
       <li>
         <a href="multiple-task-3" class="multiple-tasks">
-          <img src="/icon/rouwtaak-3.png" alt="swirl gradient">
+          <img src="/icon/rouwtaak-3.png" alt="Task 3: Moving Through Change icon">
           Verder in verandering
         </a>
       </li>
       <li>
         <a href="multiple-task-4" class="multiple-tasks">
-          <img src="/icon/rouwtaak-4.png" alt="flower gradient">
+          <img src="/icon/rouwtaak-4.png" alt="Task 4: Emotional Progress icon">
           Emotioneel verder
         </a>
       </li>
