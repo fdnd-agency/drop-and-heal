@@ -1,0 +1,3 @@
+[build]
+  publish = "drop-and-heal" 
+  command = "npm run build"
