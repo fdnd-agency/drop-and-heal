@@ -69,8 +69,8 @@
   }
 
   header {
-    container-type: inline-size;
     --_border-color: var(--border-color, #1F1F1F);
+    container-type: inline-size;
     background-color: var(--b);
     width: 100%;
     color: var(--w);
