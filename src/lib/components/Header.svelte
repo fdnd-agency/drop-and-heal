@@ -29,7 +29,7 @@
     {/if}
   </button>
 
-  <nav class="navigation-items {isMenuOpen ? 'open' : ''}" aria-labelledby="menu" >
+  <nav class="navigation-items {isMenuOpen ? 'open' : ''}" >
     <ul> 
       <li>
         <a href="multiple-task-1" class="multiple-tasks">
