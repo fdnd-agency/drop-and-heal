@@ -36,12 +36,19 @@
         }
 
         .back-button{
-            background-color: var(--rt-1);
+            border: 1px solid #F5F5F5;
             text-decoration: none;
-            border-radius: 80px;
+            border-radius: 25px;
             padding: 0.6em 1.2em;
             color: white;
             text-align: center;
+
+            &:hover {
+                background-color: rgba(245, 245, 245, 0.1);
+            }
+            &:active {
+                background-color: rgba(245, 245, 245, 0.2);
+            }
         }
     }   
     
