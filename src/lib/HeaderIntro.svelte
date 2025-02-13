@@ -1,6 +1,6 @@
 <script>
-    export let headerText_l1 = "Introductie"; 
-    export let headerText_l2 = "drop-and-heal";
+    export let headerText_l1 = "Drop and heal"; 
+    export let headerText_l2 = "Introductie";
     export let progressValue = 0; 
     export let progressMax = 100; 
 </script>
@@ -22,7 +22,7 @@
 
     .header h3 {
         font-family: Calvino-Grande;
-        font-size: 32px;
+        font-size: 2em;
         font-weight: 100;
         margin-bottom: 1rem;
     }
