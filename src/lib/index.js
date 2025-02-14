@@ -9,7 +9,6 @@ export { default as BlurgradGreen } from './blurgrad-green.svelte'
 export { default as BlurgradPink } from './blurgrad-pink.svelte'
 export { default as ArrowL } from './arrow-l.svelte'
 export { default as ArrowR } from './arrow-r.svelte'
-export { default as GradientBackground } from './molecules/gradient-background.svelte'
 
 // intro-form components
 export { default as QuestionForm } from './organism/question-form.svelte'
