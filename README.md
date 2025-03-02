@@ -1,6 +1,20 @@
 # Drop and Heal
 Rouw is een diep persoonlijke en vaak complexe ervaring die varieert van persoon tot persoon. Het rouwproces kent geen vast tijdspad of gestandaardiseerde aanpak en de intensiteit en duur van het rouwproces kunnen sterk verschillen. In onze hedendaagse samenleving krijgen veel jongvolwassenen te maken met rouw, maar vaak ontbreekt het aan toegankelijke en begrijpelijke ondersteuning die aansluit bij hun specifieke levensfase en persoonlijke behoeften. Drop & Heal streeft ernaar deze leemte te vullen met een innovatieve benadering die technologie gebruikt om een gepersonaliseerd ondersteuningsprogramma te bieden dat zich aanpast aan de unieke behoeften van elke gebruiker. Door gebruik te maken van een analyse, kan de app de specifieke rouwtaak waarin de gebruiker zich bevindt vast stellen en de gewenste hulp bieden.
 
+**Release Candidate**  
+[Live site](https://biebinbloei.agency.fdnd.nl/)
+
+**Studentenwerk Sprint 5: Fix The Flow** 
+
+|  |  |  | 
+| :--------------- | :--------------- | :--------------- |
+| Athene	| https://github.com/Nyathene/look-and-feel-corporate-identity 	| https://nyathene.github.io/look-and-feel-corporate-identity/ 
+| Matthijs	| https://github.com/Matthijs217/fix-the-flow-interactive-website 	| https://matthijs217.github.io/fix-the-flow-interactive-website/main-page/main-page-een.html 
+| Ties	| https://github.com/Ties7/fix-the-flow-interactive-website 	| https://ties7.github.io/fix-the-flow-interactive-website/vragenlijstv3/vragenlijst.html 
+| Nayome	| https://github.com/Nayomekaia/fix-the-flow-interactive-website	| https://nayomekaia.github.io/fix-the-flow-interactive-website/ 
+| Rick	| https://github.com/RickFDND/fix-the-flow-interactive-website	| https://rickfdnd.github.io/fix-the-flow-interactive-website/ 
+| Sascha	| https://github.com/saschavanvliet/fix-the-flow-interactive-website	| https://saschavanvliet.github.io/fix-the-flow-interactive-website/ 
+
 ## Design challenge
 Ontwerp een webapp voor Drop & Heal waarbij een gebruiksvriendelijke, responsieve en empathisch vormgegeven front-end centraal staat. Het moet intuïtief en toegankelijk zijn voor jongvolwassenen die zich in verschillende stadia van rouw bevinden. De interface moet naadloos aansluiten bij de emotionele en functionele behoeften van de gebruikers tijdens hun persoonlijke rouwproces.
 
