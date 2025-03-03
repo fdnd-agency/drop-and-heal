@@ -2,6 +2,9 @@
 
 <img width="922" alt="image" src="https://github.com/user-attachments/assets/809e5bc1-bce6-4da0-9167-6a2be1458b77" />
 
+**Team Sprint 8**  
+Marcin, Jules, Luc, Yamen, Mikiyas, Recep
+
 **Release Candidate**  
 [Live site](https://biebinbloei.agency.fdnd.nl/)
 
