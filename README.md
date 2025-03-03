@@ -2,6 +2,20 @@
 
 <img width="922" alt="image" src="https://github.com/user-attachments/assets/809e5bc1-bce6-4da0-9167-6a2be1458b77" />
 
+**Release Candidate**  
+[Live site](https://biebinbloei.agency.fdnd.nl/)
+
+**Studentenwerk Sprint 5: Fix The Flow** 
+
+|  |  |  | 
+| :--------------- | :--------------- | :--------------- |
+| Athene	| [repository](https://github.com/Nyathene/look-and-feel-corporate-identity) 	| [live site](https://nyathene.github.io/look-and-feel-corporate-identity/) 
+| Matthijs	| [repository](https://github.com/Matthijs217/fix-the-flow-interactive-website) 	| [live site](https://matthijs217.github.io/fix-the-flow-interactive-website/main-page/main-page-een.html) 
+| Ties	| [repository](https://github.com/Ties7/fix-the-flow-interactive-website) 	| [live site](https://ties7.github.io/fix-the-flow-interactive-website/vragenlijstv3/vragenlijst.html) 
+| Nayome	| [repository](https://github.com/Nayomekaia/fix-the-flow-interactive-website)	| [live site](https://nayomekaia.github.io/fix-the-flow-interactive-website/ 
+| Rick	| [repository](https://github.com/RickFDND/fix-the-flow-interactive-website)	| [live site](https://rickfdnd.github.io/fix-the-flow-interactive-website/) 
+| Sascha	| [repository](https://github.com/saschavanvliet/fix-the-flow-interactive-website)	| [live site](https://saschavanvliet.github.io/fix-the-flow-interactive-website/) 
+
 ## Table of Contents
 - [Description](#about)
 - [Live link](#live-link)
