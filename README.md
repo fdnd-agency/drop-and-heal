@@ -16,6 +16,10 @@
 | Rick	| [repository](https://github.com/RickFDND/fix-the-flow-interactive-website)	| [live site](https://rickfdnd.github.io/fix-the-flow-interactive-website/) 
 | Sascha	| [repository](https://github.com/saschavanvliet/fix-the-flow-interactive-website)	| [live site](https://saschavanvliet.github.io/fix-the-flow-interactive-website/) 
 
+**API Endpoints**
+* https://fdnd-agency.directus.app/items/dropandheal_task
+* https://fdnd-agency.directus.app/items/dropandheal_exercise
+
 ## Table of Contents
 - [Description](#about)
 - [Live link](#live-link)
