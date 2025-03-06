@@ -5,10 +5,6 @@
 **Release Candidate**  
 [Live site](https://biebinbloei.agency.fdnd.nl/)
 
-**API Endpoints**
-* https://fdnd-agency.directus.app/items/dropandheal_task
-* https://fdnd-agency.directus.app/items/dropandheal_exercise
-
 ## Table of Contents
 - [Description](#about)
 - [Live link](#live-link)
