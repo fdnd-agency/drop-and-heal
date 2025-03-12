@@ -1,31 +1,78 @@
 # Drop and Heal
-Rouw is een diep persoonlijke en vaak complexe ervaring die varieert van persoon tot persoon. Het rouwproces kent geen vast tijdspad of gestandaardiseerde aanpak en de intensiteit en duur van het rouwproces kunnen sterk verschillen. In onze hedendaagse samenleving krijgen veel jongvolwassenen te maken met rouw, maar vaak ontbreekt het aan toegankelijke en begrijpelijke ondersteuning die aansluit bij hun specifieke levensfase en persoonlijke behoeften. Drop & Heal streeft ernaar deze leemte te vullen met een innovatieve benadering die technologie gebruikt om een gepersonaliseerd ondersteuningsprogramma te bieden dat zich aanpast aan de unieke behoeften van elke gebruiker. Door gebruik te maken van een analyse, kan de app de specifieke rouwtaak waarin de gebruiker zich bevindt vast stellen en de gewenste hulp bieden.
 
-## Design challenge
-Ontwerp een webapp voor Drop & Heal waarbij een gebruiksvriendelijke, responsieve en empathisch vormgegeven front-end centraal staat. Het moet intuïtief en toegankelijk zijn voor jongvolwassenen die zich in verschillende stadia van rouw bevinden. De interface moet naadloos aansluiten bij de emotionele en functionele behoeften van de gebruikers tijdens hun persoonlijke rouwproces.
+<img width="922" alt="image" src="https://github.com/user-attachments/assets/809e5bc1-bce6-4da0-9167-6a2be1458b77" />
 
-## Features
-### Gepersonaliseerd programma
-De app beoordeelt welke van de vier rouwtaken: 1. acceptatie van het verlies, 2. ervaren van de pijn van het verlies, 3. aanpassen aan een leven zonder de overledene, en 4. emotioneel verdergaan het meest relevant is voor de gebruiker. Rouw is geen lineair proces, dus het kan zijn dat deze taken in andere volgorde doorlopen worden. Op basis van deze beoordeling wordt een op maat gemaakt programma aangeboden dat zich richt op de individuele behoeften en tempo van de gebruiker: "Jouw reis, jouw tempo".
+**Release Candidate**  
+[Live site](https://biebinbloei.agency.fdnd.nl/)
 
-### Community Drops 
-De app biedt interactie en steun door gebruikers in staat te stellen te reageren op de verschillende oefeningen binnen de app. Dit helpt om het isolement te verminderen en bevordert een gevoel van gemeenschap en gedeelde ervaring.
+## Table of Contents
+- [Description](#about)
+- [Live link](#live-link)
+- [Team](#team)
+- [Techniques](#techniques)
+- [Installation and Usage](#installation-and-usage)
+- [Links](#links)
+- [Resources](#resources)
 
+## About
 
-### Toegankelijkheid 
-Speciale aandacht wordt besteed aan het toegankelijk maken van de app voor gebruikers met diverse behoeften, waaronder visuele en auditieve beperkingen. Functies zoals tekst-naar-spraak, hoge contrastmodi, en aanpasbare tekstgroottes zorgen ervoor dat iedereen toegang heeft tot de ondersteuning.
+Grief is a deeply personal and often complex experience that varies from person to person. The Drop & Heal aims to provide a personalized support program for the young adults who have experienced grief. By using an analysis, the program adapts to the unique needs of every user, and can identify the specific grief task the user is in and provide the desired help.
 
-### Responsiviteit 
-De app is ontworpen om soepel te functioneren op een breed scala aan apparaten en schermformaten, zodat gebruikers toegang hebben ongeacht het apparaat dat zij gebruiken.
-Data privacy en veiligheid: Gezien de gevoeligheid van de inhoud, implementeert Drop & Heal strikte veiligheidsmaatregelen om de privacy en veiligheid van gebruikersgegevens te waarborgen.
+The goal of this project was to create a web application for Drop & Heal with a user-friendly, responsive, and empathetic front-end at its core. It should be intuitive and accessible for young adults who are in different stages of grief. The interface should seamlessly connect to the emotional and functional needs of the users during their personal grieving process. 
 
-### Nice to have
-Emotionele afstemming: Designelementen die reageren op de emotionele toestanden van de gebruiker, zoals kleurgebruik dat zich aanpast aan de stemming en interactieve elementen die kalmeren of motiveren, kunnen het gebruiksgemak en de impact van de app verhogen.
+### Live link
 
+https://dry-drop-and-heal.vercel.app/
+
+### Team
+* Alisa - _developer_ - [Github](https://github.com/aliceafanasieva)
+
+* Lisa - _developer_ - [Github](https://github.com/lisavanmansom)
+
+* Yassir - _developer_ - [Github](https://github.com/yassirog)
+
+## Techniques 
+
+The website was built using the following technologies:
+
+- **HTML** – For the structure of the website
+- **CSS** – For the styling
+- **JavaScript** – For interactive functionalities
+- **SvelteKit** – To set up a Svelte-based framework
+- **Vercel** - for website deployment
+- **Directus** – Used as a headless CMS 
+- **GitHub** – For working on project as a team
+- **Atomic design** – Library structure
+- **Progressive Enhancement** - coding stragedy
+  
+  
+## Installation and usage
+
+Follow the steps below to use this project locally:
+
+1. Install node js:
+   
+```npm install```
+2. Clone the repository:
+   
+```git clone https://github.com/lisavanmansom/dry-drop-and-heal.git```
+
+3. Open the repository in a code editor (for example, VSCode).
+4. Open the terminal and navigate to the project folder.
+5. Type command:
+   
+```npm install```
+
+6. Type command:
+    
+```npm run dev```
+
+You can now work on the project on locally. 
+
+## Links
+Link to Project Board: https://github.com/orgs/fdnd-agency/projects/37;
+Link to code conventions: https://github.com/orgs/fdnd-agency/projects/37/views/1?filterQuery=conventi&pane=issue&itemId=80747990&issue=fdnd-agency%7Cdrop-and-heal%7C2;
 
 ## Resources
 
-<!-- [Backlog](https://github.com/orgs/fdnd-agency/projects/37) -->
-
-[Design](https://github.com/fdnd-agency/drop-and-heal/tree/main/design)
-
+Design:  https://github.com/fdnd-agency/drop-and-heal/tree/main/design
