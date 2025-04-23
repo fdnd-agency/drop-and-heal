@@ -63,8 +63,8 @@
     min-block-size: 100dvh;
     gap: 2rem;
     align-items: center;
-    color: white;
-    background-color: black;
+    color: var(--w);
+    background-color: var(--b);
     width: 100%;
     min-height: 100vh;
     overflow: hidden;
@@ -75,8 +75,6 @@
   .intro-content {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 4rem;
-    padding: 8rem 0rem 5% 0rem;
     justify-items: center;
     @media (min-width: 50rem) {
       grid-template-columns: repeat(3, 1fr);
@@ -94,7 +92,6 @@
     min-width: 14rem;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     @media (min-width: 50rem) {
       padding: 1rem;
       max-width: 24rem;
@@ -116,9 +113,8 @@
     padding: 1rem;
     background: none;
     border-radius: 50px;
-    border: 1px solid white;
+    border: 1px solid var(--w);
     white-space: nowrap;
-    width: min-content;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -131,8 +127,6 @@
 
   .nav-buttons button:hover {
     background-color: rgba(255, 255, 255, 0.1);
-    border-color: rgba(255, 255, 255, 1);
-    color: rgba(255, 255, 255, 1);
   }
 
   .nav-buttons button:disabled {
@@ -147,6 +141,6 @@
     align-items: center;
     width: 100%;
     height: 100%;
-    color: white;
+    color: var(--w);
   }
 </style>

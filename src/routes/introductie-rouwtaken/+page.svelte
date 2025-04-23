@@ -73,8 +73,8 @@
     min-block-size: 100dvh;
     gap: 2rem;
     align-items: center;
-    color: white;
-    background-color: black;
+    color: var(--w);
+    background-color: var(--b);
     width: 100%;
     height: 100vh;
     overflow-y: auto;
@@ -92,7 +92,6 @@
     padding: 8rem 0rem 5% 0rem;
     justify-items: center;
     @media (min-width: 45rem) {
-      display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 3rem;
       padding: 1rem 3rem 0 3rem;
@@ -109,13 +108,8 @@
       margin-bottom: 1rem;
       max-width: 13rem;
       max-height: 30rem;
-      transition: all 0.3s ease;
       opacity: 0.6;
       filter: brightness(0.7);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      transition: all 1s ease;
     }
     &:hover {
       opacity: 1;
