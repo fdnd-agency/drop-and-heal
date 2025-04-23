@@ -27,7 +27,7 @@
                 class="community-image"
                 loading="lazy"
                 src={image}
-                alt="Community Image"
+                alt="Community"
               />
             {/each}
           </div>
@@ -54,7 +54,7 @@
   .card-image {
     display: flex;
     justify-content: center;
-    width: -webkit-fill-available;
+    width: 100%;
     border-radius: 20px 20px 0 0;
     margin-top: 1em;
     height: 250px;
@@ -89,10 +89,6 @@
   .startbutton a {
     color: white;
     text-decoration: none;
-  }
-
-  .startbutton h3 {
-    margin: 0;
   }
 
   .exercise-text {
