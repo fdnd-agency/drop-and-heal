@@ -78,6 +78,14 @@
     gap: 4rem;
     padding: 8rem 0rem 5% 0rem;
     justify-items: center;
+    @media (min-width: 50rem) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      padding: 5rem 2rem 0rem 2rem;
+    }
+    @media (min-width: 65rem) {
+      gap: 3rem;
+    }
   }
 
   article {
@@ -87,6 +95,13 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    @media (min-width: 50rem) {
+      padding: 1rem;
+      max-width: 24rem;
+    }
+    @media (min-width: 65rem) {
+      padding: 1rem;
+    }
   }
 
   .nav-buttons {
@@ -133,28 +148,5 @@
     width: 100%;
     height: 100%;
     color: white;
-  }
-
-  @media (min-width: 50rem) {
-    .intro-content {
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
-      padding: 5rem 2rem 0rem 2rem;
-    }
-
-    article {
-      padding: 1rem;
-      max-width: 24rem;
-    }
-  }
-
-  @media (min-width: 65rem) {
-    .intro-content {
-      gap: 3rem;
-    }
-
-    article {
-      padding: 1rem;
-    }
   }
 </style>

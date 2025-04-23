@@ -80,6 +80,9 @@
     overflow-y: auto;
     padding: 2rem;
     position: relative;
+    @media (min-width: 45rem) {
+      overflow: hidden;
+    }
   }
 
   .intro-content {
@@ -88,44 +91,22 @@
     gap: 8rem;
     padding: 8rem 0rem 5% 0rem;
     justify-items: center;
-  }
-
-  article {
-    max-width: 25rem;
-    max-height: 30rem;
-    transition: all 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    transition: all 1s ease;
-  }
-
-  article p {
-    color: var(--g);
-  }
-
-  article h2 {
-    margin-top: 1.5rem;
-  }
-
-  @media (min-width: 45rem) {
-    main {
-      overflow: hidden;
-    }
-
-    .intro-content {
+    @media (min-width: 45rem) {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 3rem;
       padding: 1rem 3rem 0 3rem;
     }
+  }
 
-    article {
+  article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 1s ease;
+    @media (min-width: 45rem) {
       width: 100%;
       margin-bottom: 1rem;
-    }
-
-    article {
       max-width: 13rem;
       max-height: 30rem;
       transition: all 0.3s ease;
@@ -136,31 +117,40 @@
       justify-content: center;
       transition: all 1s ease;
     }
+    &:hover {
+      opacity: 1;
+      filter: none;
+      transform: scale(1.4);
+    }
+  }
 
-    article h2 {
+  article p {
+    color: var(--g);
+    @media (min-width: 45rem) {
+      font-size: 12px;
+      line-height: 1.2rem;
+      margin-bottom: 0.2rem;
+      margin-top: 0;
+    }
+  }
+
+  article h2 {
+    margin-top: 1.5rem;
+    @media (min-width: 45rem) {
       font-size: 27px;
       margin-bottom: 0.2rem;
       margin-top: 0;
     }
+  }
 
+  @media (min-width: 45rem) {
     article h4 {
       font-size: 14px;
       margin-bottom: 0.2rem;
     }
 
-    article p {
-      font-size: 12px;
-      line-height: 1.2rem;
-    }
-
     article em {
       font-size: 22px;
-    }
-
-    article:hover {
-      opacity: 1;
-      filter: none;
-      transform: scale(1.4);
     }
 
     article h2,
