@@ -5,77 +5,77 @@
   import Nav from "../../lib/components/Nav.svelte";
 </script>
 
-  <Header title="Het verlies aanvaarden" progressColor="#6e9158" />
+<Header title="Het verlies aanvaarden" progressColor="#6e9158" />
 
-  <main>
-    <MeshgradGreen class="meshgrad" />
-    <h2>Rouwstappen van de dag</h2>
-    <h4>2 oefeningen open vandaag</h4>
-  </main>
+<main>
+  <MeshgradGreen class="meshgrad" />
+  <h2>Rouwstappen van de dag</h2>
+  <h4>2 oefeningen open vandaag</h4>
+</main>
 
-  <section class="exercises">
-    <Card
-      imageSrc="/icon/rouwtaak-3-foto.png"
-      imageAlt="Rouwtaak Foto"
-      actionText="Start oefening"
-      description="Schrijven"
-      title="Jouw plattengrond"
-      buttonColor="#6e9158"
-      communityDrops="47"
-      communityImages={[
-        "/icon/community1.png",
-        "/icon/community2.png",
-        "/icon/community3.png",
-      ]}
-    />
-    <Card
-      imageSrc="/icon/rouwtaak-3-foto.png"
-      imageAlt="Rouwtaak Foto"
-      actionText="Start oefening"
-      description="Schrijven"
-      title="Jouw plattengrond"
-      buttonColor="#6e9158"
-      communityDrops="47"
-      communityImages={[
-        "/icon/community1.png",
-        "/icon/community2.png",
-        "/icon/community3.png",
-      ]}
-    />
-    <Card
-      imageSrc="/icon/rouwtaak-3-foto.png"
-      imageAlt="Rouwtaak Foto"
-      actionText="Start oefening"
-      description="Schrijven"
-      title="Jouw plattengrond"
-      buttonColor="#6e9158"
-      communityDrops="47"
-      communityImages={[
-        "/icon/community1.png",
-        "/icon/community2.png",
-        "/icon/community3.png",
-      ]}
-    />
-    <Card
-      imageSrc="/icon/rouwtaak-3-foto.png"
-      imageAlt="Rouwtaak Foto"
-      actionText="Start oefening"
-      description="Schrijven"
-      title="Jouw plattengrond"
-      buttonColor="#6e9158"
-      communityDrops="47"
-      communityImages={[
-        "/icon/community1.png",
-        "/icon/community2.png",
-        "/icon/community3.png",
-      ]}
-    />
-  </section>
+<section class="exercises">
+  <Card
+    imageSrc="/icon/rouwtaak-3-foto.png"
+    imageAlt="Rouwtaak Foto"
+    actionText="Start oefening"
+    description="Schrijven"
+    title="Jouw plattengrond"
+    buttonColor="#415932"
+    communityDrops="47"
+    communityImages={[
+      "/icon/community1.png",
+      "/icon/community2.png",
+      "/icon/community3.png",
+    ]}
+  />
+  <Card
+    imageSrc="/icon/rouwtaak-3-foto.png"
+    imageAlt="Rouwtaak Foto"
+    actionText="Start oefening"
+    description="Schrijven"
+    title="Jouw plattengrond"
+    buttonColor="#415932"
+    communityDrops="47"
+    communityImages={[
+      "/icon/community1.png",
+      "/icon/community2.png",
+      "/icon/community3.png",
+    ]}
+  />
+  <Card
+    imageSrc="/icon/rouwtaak-3-foto.png"
+    imageAlt="Rouwtaak Foto"
+    actionText="Start oefening"
+    description="Schrijven"
+    title="Jouw plattengrond"
+    buttonColor="#415932"
+    communityDrops="47"
+    communityImages={[
+      "/icon/community1.png",
+      "/icon/community2.png",
+      "/icon/community3.png",
+    ]}
+  />
+  <Card
+    imageSrc="/icon/rouwtaak-3-foto.png"
+    imageAlt="Rouwtaak Foto"
+    actionText="Start oefening"
+    description="Schrijven"
+    title="Jouw plattengrond"
+    buttonColor="#415932"
+    communityDrops="47"
+    communityImages={[
+      "/icon/community1.png",
+      "/icon/community2.png",
+      "/icon/community3.png",
+    ]}
+  />
+</section>
 
-  <Nav />
+<Nav />
 
 <style>
- *::-webkit-scrollbar {
+  *::-webkit-scrollbar {
     display: none;
   }
 
@@ -109,7 +109,7 @@
   }
 
   main h4 {
-    color: grey;
+    color: rgb(225, 223, 223);
   }
 
   .exercises {
