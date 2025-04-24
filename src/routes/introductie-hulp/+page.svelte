@@ -96,9 +96,6 @@
       padding: 1rem;
       max-width: 24rem;
     }
-    @media (min-width: 65rem) {
-      padding: 1rem;
-    }
   }
 
   .nav-buttons {
