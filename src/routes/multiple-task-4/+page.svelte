@@ -75,14 +75,6 @@
 <Nav />
 
 <style>
-  *::-webkit-scrollbar {
-    display: none;
-  }
-
-  body {
-    background: rgb(17, 17, 17);
-  }
-
   h2 {
     font-family: Calvino;
     font-size: 2em;
@@ -91,12 +83,17 @@
   main {
     position: relative;
     background-color: var(--b);
-    background-image: url("/gradients/Gr-pink.png");
+    background-image: radial-gradient(
+        circle,
+        rgba(137, 66, 76, 0.6) 0%,
+        rgba(137, 66, 76, 0.4) 20%,
+        rgba(137, 66, 76, 0.1) 50%,
+        rgba(17, 17, 17, 0.8) 100%
+    );
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     color: white;
-    justify-content: center;
     text-align: center;
     padding-top: 5em;
     padding-bottom: 2em;
