@@ -14,19 +14,22 @@ export { default as BlurgradRed } from './atoms/blur-gradients/blurgrad-red.svel
 export { default as BlurgradGreen } from './atoms/blur-gradients/blurgrad-green.svelte'
 export { default as BlurgradPink } from './atoms/blur-gradients/blurgrad-pink.svelte'
 
-export { default as ArrowL } from './arrow-l.svelte'
-export { default as ArrowR } from './arrow-r.svelte'
+export { default as ArrowL } from './atoms/arrow-l.svelte'
+export { default as ArrowR } from './atoms/arrow-r.svelte'
 export { default as NavIcons } from './atoms/icons-nav.svelte'
+export { default as QuestionOption } from './atoms/question-option.svelte'
+
+// Molecules
+export { default as NavButtons } from './molecules/NavButtons.svelte'
+export { default as QuestionSet } from './molecules/question-set.svelte'
+
+// Organisms
+export { default as QuestionForm } from './organism/question-form.svelte'
+export { default as HeaderIntro } from './organism/HeaderIntro.svelte'
 
 // Components
 export { default as Card } from './components/Card.svelte'
 export { default as Header } from './components/Header.svelte'
 export { default as Nav } from './components/Nav.svelte'
 
-// intro-form components
-export { default as QuestionForm } from './organism/question-form.svelte'
-export { default as QuestionOption } from './atoms/question-option.svelte'
-export { default as QuestionSet } from './molecules/question-set.svelte'
 
-export { default as NavButtons } from './NavButtons.svelte'
-export { default as HeaderIntro } from './HeaderIntro.svelte'
