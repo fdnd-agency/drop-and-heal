@@ -22,6 +22,7 @@ export { default as QuestionOption } from './atoms/question-option.svelte'
 // Molecules
 export { default as NavButtons } from './molecules/NavButtons.svelte'
 export { default as QuestionSet } from './molecules/question-set.svelte'
+export { default as MeshgradCarousel } from './molecules/meshgrad-carousel.svelte'
 
 // Organisms
 export { default as QuestionForm } from './organism/question-form.svelte'
