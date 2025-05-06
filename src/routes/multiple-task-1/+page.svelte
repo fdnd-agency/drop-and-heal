@@ -1,8 +1,5 @@
 <script>
-  import Header from "../../lib/components/Header.svelte";
-  import Card from "../../lib/components/Card.svelte";
-  import { MeshgradBlue } from "$lib";
-  import Nav from "../../lib/components/Nav.svelte";
+  import { Header, Nav, Card, MeshgradBlue } from "$lib";
 </script>
 
 <Header title="Het verlies aanvaarden" progressColor="#64aac7" />

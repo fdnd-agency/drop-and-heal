@@ -1,7 +1,5 @@
 <script>
-  import NavButtons from "$lib/NavButtons.svelte";
-  import HeaderIntro from "$lib/HeaderIntro.svelte";
-  import BlurgradGreen from "$lib/blurgrad-green.svelte";
+  import {BlurgradGreen, HeaderIntro, NavButtons} from "$lib";
 </script>
 
 <main>

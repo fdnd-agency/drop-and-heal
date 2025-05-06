@@ -1,11 +1,5 @@
 <script>
-  import NavButtons from "$lib/NavButtons.svelte";
-  import HeaderIntro from "$lib/HeaderIntro.svelte";
-  import BlurgradBlue from "$lib/blurgrad-blue.svelte";
-  import MeshgradBlue from "$lib/meshgrad-blue.svelte";
-  import MeshgradRed from "$lib/meshgrad-red.svelte";
-  import MeshgradGreen from "$lib/meshgrad-green.svelte";
-  import MeshgradPink from "$lib/meshgrad-pink.svelte";
+  import {HeaderIntro, NavButtons, MeshgradBlue, MeshgradRed, MeshgradGreen, MeshgradPink} from "$lib";
 
   let rt = "Rouwtaak";
   let sub1 = "Het verlies aanvaarden";
