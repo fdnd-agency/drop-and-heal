@@ -17,13 +17,8 @@
   </hgroup>
   <QuestionForm />
 
-  <div aria-hidden="true">
-    <BlurgradPink pageStyle="form-page" />
-  </div>
-
-  <div aria-hidden="true">
-    <BlurgradPink pageStyle="form-page"/>
-  </div>
+  <BlurgradPink pageStyle="form-page" />
+ 
 </main>
   
 <style>
@@ -81,16 +76,10 @@
   
   progress[value]::-webkit-progress-value { background-color: var(--w); }
 
-
-  div:nth-of-type(2) {
-    position: absolute;
-    top: 33em;
-    transform: matrix(0, 1, 1, 0, 0, 0);
-  }
-
   div:nth-of-type(3) {
     position: absolute;
     right: 0em;
     bottom: 0em;
   }
+
 </style>

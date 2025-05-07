@@ -1,6 +1,5 @@
 <script>
-    import ArrowL from '$lib/arrow-l.svelte';
-    import ArrowR from '$lib/arrow-r.svelte';
+    import {ArrowL, ArrowR} from "$lib";
 
     export let leftLink = "#"; 
     export let rightLink = "#"; 

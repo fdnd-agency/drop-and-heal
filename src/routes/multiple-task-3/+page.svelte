@@ -1,8 +1,5 @@
 <script>
-  import Header from "../../lib/components/Header.svelte";
-  import Card from "../../lib/components/Card.svelte";
-  import { MeshgradGreen } from "$lib";
-  import Nav from "../../lib/components/Nav.svelte";
+  import { Header, Nav, Card, MeshgradGreen } from "$lib";
 </script>
 
 <Header title="Het verlies aanvaarden" progressColor="#6e9158" />
@@ -75,13 +72,6 @@
 <Nav />
 
 <style>
-  *::-webkit-scrollbar {
-    display: none;
-  }
-
-  body {
-    background: rgb(17, 17, 17);
-  }
 
   h2 {
     font-family: Calvino;
@@ -91,7 +81,13 @@
   main {
     position: relative;
     background-color: var(--b);
-    background-image: url("/gradients/Gr-green.png");
+    background-image: radial-gradient(
+        circle,
+        rgba(98, 66, 30, 0.6) 0%,
+        rgba(98, 66, 30, 0.4) 20%,
+        rgba(98, 66, 30, 0.1) 50%,
+        rgba(17, 17, 17, 0.8) 100%
+    );
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -101,7 +97,8 @@
     padding-top: 5em;
     padding-bottom: 2em;
     overflow: hidden;
-  }
+}
+
 
   main h2 {
     margin-top: 5em;

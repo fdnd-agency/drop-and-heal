@@ -4,22 +4,19 @@ export let pageStyle = 'default';
 export let customStyles = {};
 </script>
 
-<img 
-src="/gradients/Meshgrad-pink.png" 
-alt="" 
-width="100" height="100" 
+<div
 class={`blurred-image ${pageStyle}`}
-style="{customStyles}" />
+style="{customStyles}" ></div>
  
 <style>
     .blurred-image {
-        background-color: rgba(45, 45, 255, 0.872);
+        background: radial-gradient(circle, rgba(125, 66, 74, 0.7));
         position: absolute;
         width: 300px;
         height: 300px;
-        filter: blur(200px) brightness(1.7);
-        opacity: 0.8;
         z-index: 1;
+        filter: blur(100px);
+        border-radius: 50%;
     }
 
     .blurred-image::before {

@@ -1,7 +1,6 @@
 <script>
-    import MeshCarousel from '$lib/molecules/meshgrad-carousel.svelte';
-
     import { onMount } from 'svelte';
+    import { MeshgradCarousel } from '$lib';
 
 let button;
 
@@ -28,7 +27,7 @@ onMount(() => {
 <main>
     
     <div class="animation-carousel">
-        <MeshCarousel />
+        <MeshgradCarousel />
     </div>
 
     <article class="main-content">
