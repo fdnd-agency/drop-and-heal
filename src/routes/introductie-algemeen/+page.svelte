@@ -41,7 +41,7 @@
   <div class="intro-buttons">
     <NavButtons
       leftLink="./uitleg-metafoor"
-      rightLink="./introductie-rouwtaken"
+      rightLink="./introductie-rouwtaken/1"
       borderColor="var(--rt-3)"
     />
   </div>

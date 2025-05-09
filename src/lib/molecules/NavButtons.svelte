@@ -23,6 +23,7 @@
         max-width: 7rem;
         gap: 0.5rem;
         margin-bottom: 0.5rem; 
+        justify-self: center;
     }
 
     .nav-buttons a {
