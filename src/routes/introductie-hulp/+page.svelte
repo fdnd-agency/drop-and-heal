@@ -62,8 +62,8 @@
     min-block-size: 100dvh;
     gap: 2rem;
     align-items: center;
-    color: var(--w);
-    background-color: var(--b);
+    color: var(--white);
+    background-color: var(--black);
     width: 100%;
     min-height: 100vh;
     overflow: hidden;
@@ -109,7 +109,7 @@
     padding: 1rem;
     background: none;
     border-radius: 50px;
-    border: 1px solid var(--w);
+    border: 1px solid var(--white);
     white-space: nowrap;
     display: flex;
     justify-content: center;
@@ -137,6 +137,6 @@
     align-items: center;
     width: 100%;
     height: 100%;
-    color: var(--w);
+    color: var(--white);
   }
 </style>

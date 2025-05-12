@@ -19,8 +19,8 @@
 
     main {
         display: flex;
-        color: var(--w);
-        background-color: var(--b);
+        color: var(--white);
+        background-color: var(--black);
         padding: 2em;
         width: 100%;
         min-height: 100vh;
