@@ -83,13 +83,13 @@
 
   h1  { font-family: Calvino; z-index: 10; font-size: clamp(3rem, 15vw, 4rem); font-weight: 600; }
   h2  { font-family: Calvino; font-weight: 600; font-size:clamp(1.6rem, 5vw, 2rem);}
-  p   { font-family: Figtree; color:var(--b-h); font-weight: 100; font-size:clamp(1rem, 5vw, 1.2rem); font-style: italic;}
+  p   { font-family: Figtree; color:var(--border-grey); font-weight: 100; font-size:clamp(1rem, 5vw, 1.2rem); font-style: italic;}
   ul  { list-style: none ;}
-  a   { text-decoration: none; color: var(--w);}
+  a   { text-decoration: none; color: var(--white);}
 
   main {
-    background-color: var(--b);
-    color: var(--w);
+    background-color: var(--black);
+    color: var(--white);
     display: flex;
     flex-direction: column;
     gap: 2em;
@@ -187,7 +187,7 @@
             border-bottom: 1px solid var(--rt);
             padding-bottom: .1em;
             > a {
-              color: var(--b-z);
+              color: var(--border-grey);
             }
             @media (hover: hover) { 
               > a:hover {
@@ -197,7 +197,7 @@
           }
         }
         > summary {
-          color: var(--b-z);
+          color: var(--border-grey);
           letter-spacing: 0.25em;
         }
         @media (hover: hover) { 
@@ -225,7 +225,7 @@
       background-color: var(--progress-bg);
       border-radius: 20px;
     }
-    progress[value]::-webkit-progress-value { background-color: var(--w);}
+    progress[value]::-webkit-progress-value { background-color: var(--white);}
   }
 
   > article {

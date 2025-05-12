@@ -80,7 +80,7 @@
 
   main {
     position: relative;
-    background-color: var(--b);
+    background-color: var(--black);
     background-image: radial-gradient(
         circle,
         rgba(98, 66, 30, 0.6) 0%,

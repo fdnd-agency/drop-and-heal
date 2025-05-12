@@ -42,7 +42,7 @@
   <NavButtons 
     leftLink={prevLink}
     rightLink={nextLink}
-    borderColor="var(--w)" 
+    borderColor="var(--white)" 
   />
 </main>
 
@@ -53,8 +53,8 @@
     min-block-size: 100dvh;
     gap: 2rem;
     align-items: center;
-    color: var(--w);
-    background-color: var(--b);
+    color: var(--white);
+    background-color: var(--black);
     width: 100%;
     height: 100vh;
     overflow-y: auto;
@@ -100,7 +100,7 @@
   }
 
   article p {
-    color: var(--g);
+    color: var(--grey);
     @media (min-width: 45rem) {
       font-size: 12px;
       line-height: 1.2rem;

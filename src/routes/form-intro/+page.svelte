@@ -27,12 +27,12 @@
   h1  { font-size: clamp(2.2rem, 10vw, 3.5rem); font-weight: 600;}
   h2  { font-weight: 100; font-size:clamp(1.6rem, 5vw, 2rem);}
   
-  p   { color:var(--b-h); font-weight: 100; font-size:clamp(1rem, 5vw, 1.2rem); font-style: italic;}
+  p   { color:var(--border-grey); font-weight: 100; font-size:clamp(1rem, 5vw, 1.2rem); font-style: italic;}
 
   main {
     align-items: center;
-    background-color: var(--b);
-    color: var(--w);
+    background-color: var(--black);
+    color: var(--white);
     display: flex;
     flex-direction: column;
     gap: 7.5em;
@@ -74,7 +74,7 @@
     border-radius: 20px;
   }
   
-  progress[value]::-webkit-progress-value { background-color: var(--w); }
+  progress[value]::-webkit-progress-value { background-color: var(--white); }
 
   div:nth-of-type(3) {
     position: absolute;
