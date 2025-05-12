@@ -1,63 +1,49 @@
 <script>
-  import {HeaderIntro, NavButtons, MeshgradBlue, MeshgradRed, MeshgradGreen, MeshgradPink} from "$lib";
+  export let data;
+  import { page } from '$app/stores';
+  import {HeaderIntro, MeshgradBlue, MeshgradRed, MeshgradGreen, MeshgradPink, NavButtons} from "$lib";
+  const { tasks } = data;
 
-  let rt = "Rouwtaak";
-  let sub1 = "Het verlies aanvaarden";
-  let d1 = "Ontdek hoe je de realiteit van het verlies kunt omarmen.";
+  const themeComponents = {
+    blue: MeshgradBlue,
+    red: MeshgradRed,
+    green: MeshgradGreen,
+    pink: MeshgradPink
+  };
+
+  $: currentIndex = tasks.findIndex(task => task.id == $page.params.slug);
+  $: progressValue = ((currentIndex + 1) / tasks.length) * 100;
+
+  $: prevLink = currentIndex > 0
+    ? `/introductie-rouwtaken/${tasks[currentIndex - 1].id}`
+    : "/introductie-algemeen";
+
+  $: nextLink = currentIndex < tasks.length - 1
+    ? `/introductie-rouwtaken/${tasks[currentIndex + 1].id}`
+    : "/introductie-hulp"
 </script>
 
 <main>
-  <HeaderIntro
-    headerText_l1="Introductie"
-    headerText_l2="rouwtaken"
-    progressValue={60}
-  />
+  <HeaderIntro headerText_l1="Introductie" headerText_l2="rouwtaken" progressValue={progressValue} />
+
   <section class="intro-content">
-    <article>
-      <h2>{rt}<em>1</em></h2>
-      <h4>{sub1}</h4>
-      <p>{d1}</p>
-      <MeshgradBlue />
-    </article>
-
-    <article>
-      <h2>{rt}<em>2</em></h2>
-      <h4>De pijn doorvoelen</h4>
-      <p>
-        Sta jezelf toe om de pijn te voelen en leer om deze op jouw manier te
-        verwerken.
-      </p>
-      <MeshgradRed />
-    </article>
-
-    <article>
-      <h2>{rt}<em>3</em></h2>
-      <h4>Verder in verandering</h4>
-      <p>
-        Vind jouw weg in een wereld die nu anders is door het verlies van je
-        dierbare.
-      </p>
-      <MeshgradGreen />
-    </article>
-
-    <article>
-      <h2>{rt}<em>4</em></h2>
-      <h4>Emotioneel verder gaan</h4>
-      <p>
-        Ontdek hoe je een nieuw pad kunt inslaan terwijl je het verlies een
-        betekenisvolle plek geeft in je leven.
-      </p>
-      <MeshgradPink />
-    </article>
+    {#each tasks as task, index}
+      <article class={index === currentIndex ? "active" : ""}>
+        <h2>Rouwtaak <em>{task.number}</em></h2>
+        <h4>{task.title}</h4>
+        <p>{task.description}</p>
+        {#if themeComponents[task.theme]}
+          <svelte:component this={themeComponents[task.theme]} />
+        {/if}
+      </article>
+    {/each}
   </section>
 
-  <section class="intro-buttons">
-    <NavButtons
-      leftLink="./introductie-algemeen"
-      rightLink="./introductie-hulp"
-      borderColor="var(--w)"
-    />
-  </section>
+  <NavButtons 
+    leftLink={prevLink}
+    rightLink={nextLink}
+    borderColor="var(--w)" 
+  />
 </main>
 
 <style>
@@ -92,7 +78,8 @@
     }
   }
 
-  article {
+  article,
+  article.active {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -147,10 +134,19 @@
       display: none;
     }
 
+    article.active h2,
+    article.active h4,
+    article.active p,
     article:hover h2,
     article:hover h4,
-    article:hover p {
+    article:hover p  {
       display: block;
+      opacity: 1;
+    }
+
+    article.active {
+      opacity: 1;
+      filter: brightness(1);
     }
   }
 </style>
