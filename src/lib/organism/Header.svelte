@@ -61,7 +61,7 @@
 
 <style>
   :root {
-    --w: #ffff;
+    --white: #ffff;
     --b: #111;
     --g: #a6a6a6;
     --progress-bg: #595959;
@@ -71,9 +71,9 @@
   header {
     --_border-color: var(--border-color, #1F1F1F);
     container-type: inline-size;
-    background-color: var(--b);
+    background-color: var(--black);
     width: 100%;
-    color: var(--w);
+    color: var(--white);
     border-bottom: 2px solid var(--_border-color);
     margin-bottom: 1em;
     margin: 0em;
@@ -106,7 +106,7 @@
         appearance: none;
 
         &::-webkit-progress-bar {
-          background-color: var(--g);
+          background-color: var(--grey);
           border-radius: 5px;
         }
         &::-webkit-progress-value {
@@ -119,7 +119,7 @@
       display: none;
       background: none;
       border: none;
-      color: var(--w);
+      color: var(--white);
       font-size: 1.875em;
       cursor: pointer;
       margin-right: 1em;
@@ -129,7 +129,7 @@
       z-index: 15;
     }
     &:focus {
-        outline: 2px solid var(--w);
+        outline: 2px solid var(--white);
         outline-offset: 2px;
       }
     }
@@ -146,7 +146,7 @@
       flex-direction: column;
       align-items: flex-start;
       width: 100%;
-      background-color: var(--b);
+      background-color: var(--black);
       padding: 1em;
       position: absolute;
       top: 1.25em;
@@ -189,7 +189,7 @@
         align-items: center;
         text-decoration: none;
         padding: 1em;
-        color: var(--w);
+        color: var(--white);
         margin-right: 1.25em;
         text-align: center;
         flex-direction: column;

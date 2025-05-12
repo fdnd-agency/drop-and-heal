@@ -71,7 +71,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: var(--g); /* Grijze kleur */
+    color: var(--grey); /* Grijze kleur */
     cursor: pointer;
     transition: color 0.2s;
     margin: 0.5em;
@@ -80,7 +80,7 @@
   }
 
   .item.active {
-    color: var(--w); /* Witte kleur */
+    color: var(--white); /* Witte kleur */
   }
 
   svg {

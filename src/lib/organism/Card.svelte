@@ -61,7 +61,7 @@
   }
 
   .exercise-info {
-    background-color: var(--b);
+    background-color: var(--black);
     border-left: #434343 solid 1px;
     border-right: #434343 solid 1px;
     border-bottom: #434343 solid 1px;
@@ -99,7 +99,7 @@
     text-decoration: none;
     align-items: center;
     color: white;
-    border: solid var(--g) 2px;
+    border: solid var(--grey) 2px;
     border-radius: 20px;
     padding: 0.2em;
     padding-left: 1em;

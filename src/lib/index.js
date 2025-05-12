@@ -27,10 +27,9 @@ export { default as MeshgradCarousel } from './molecules/meshgrad-carousel.svelt
 // Organisms
 export { default as QuestionForm } from './organism/question-form.svelte'
 export { default as HeaderIntro } from './organism/HeaderIntro.svelte'
+export { default as Card } from './organism/Card.svelte'
+export { default as Header } from './organism/Header.svelte'
+export { default as Nav } from './organism/Nav.svelte'
 
-// Components
-export { default as Card } from './components/Card.svelte'
-export { default as Header } from './components/Header.svelte'
-export { default as Nav } from './components/Nav.svelte'
 
 
