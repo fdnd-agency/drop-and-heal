@@ -4,6 +4,17 @@
   let currentStep = 0;
   let selectedAnswers = Array(surveyData.length).fill(undefined);
 
+  function prevStep() {
+    if (currentStep > 0) {
+      currentStep -= 1;
+    }
+  }
+
+  function skipQuestion() {
+    selectedAnswers[currentStep] = null;
+    nextStep();
+  }
+
   function nextStep() {
     if (currentStep < surveyData.length - 1) {
       currentStep += 1;
@@ -40,6 +51,23 @@
       {/if}
     {/each}
   </div>
+
+  <button
+    class="curButton"
+    type="button"
+    on:click={prevStep}
+    disabled={currentStep === 0}
+  >
+    Terug
+  </button>
+
+  <button
+    type="button"
+    class="radio-button skip-button"
+    on:click={skipQuestion}
+  >
+    Overslaan
+  </button>
 
   {#if currentStep === surveyData.length - 1}
     <button type="submit">Bekijk uw resultaat</button>
