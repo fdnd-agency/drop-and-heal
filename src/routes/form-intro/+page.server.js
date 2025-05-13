@@ -21,3 +21,11 @@ export const actions = {
     }
   }
 };
+
+import surveyData from '$lib/data/survey.json';
+
+export function load() {
+  return {
+    surveyData
+  };
+}
