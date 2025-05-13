@@ -1,21 +1,49 @@
 <script>
   export let surveyData = [];
+
+  let currentStep = 0;
+  let selectedAnswers = Array(surveyData.length).fill(undefined);
+
+  function nextStep() {
+    if (currentStep < surveyData.length - 1) {
+      currentStep += 1;
+    }
+  }
+
+  function handleSelect(optionValue) {
+    selectedAnswers[currentStep] = optionValue;
+    nextStep();
+  }
 </script>
 
 <form method="POST" action="?/submit">
-  {#each surveyData as question}
-    <fieldset>
-      <legend>{question.legend}</legend>
-      {#each question.options as option}
-        <div class="answers">
-          <label class="radio-button">
-            <input type="radio" name={question.name} value={option.value} />
-            {option.labelText}
-          </label>
-        </div>
-      {/each}
-    </fieldset>
-  {/each}
+  <div>
+    {#each surveyData as question, index}
+      {#if index === currentStep}
+        <fieldset>
+          <legend>{question.legend}</legend>
+          {#each question.options as option}
+            <div class="answers">
+              <label class="radio-button">
+                <input
+                  type="radio"
+                  name={question.name}
+                  value={option.value}
+                  checked={selectedAnswers[index] === option.value}
+                  on:change={() => handleSelect(option.value)}
+                />
+                {option.labelText}
+              </label>
+            </div>
+          {/each}
+        </fieldset>
+      {/if}
+    {/each}
+  </div>
+
+  {#if currentStep === surveyData.length - 1}
+    <button type="submit">Bekijk uw resultaat</button>
+  {/if}
 
   <button class="submitButton" type="submit">Submit</button>
 </form>
