@@ -1,5 +1,6 @@
 <script>
   export let surveyData = [];
+  import { onMount } from "svelte";
 
   let currentStep = 0;
   let selectedAnswers = Array(surveyData.length).fill(undefined);
@@ -25,58 +26,72 @@
     selectedAnswers[currentStep] = optionValue;
     nextStep();
   }
+
+  let steps;
+
+  onMount(() => {
+    document.documentElement.classList.add("js-enhanced");
+    steps = document.querySelectorAll("[data-step]");
+    updateActiveStep();
+  });
+
+  $: if (steps) updateActiveStep();
+
+  function updateActiveStep() {
+    steps.forEach((el, i) => {
+      el.classList.toggle("active", i === currentStep);
+    });
+  }
 </script>
 
 <form method="POST" action="?/submit">
   <div>
     {#each surveyData as question, index}
-      {#if index === currentStep}
-        <fieldset>
-          <legend>{question.legend}</legend>
-          {#each question.options as option}
-            <div class="answers">
-              <label class="radio-button">
-                <input
-                  type="radio"
-                  name={question.name}
-                  value={option.value}
-                  checked={selectedAnswers[index] === option.value}
-                  on:change={() => handleSelect(option.value)}
-                />
-                {option.labelText}
-              </label>
-            </div>
-          {/each}
-        </fieldset>
-      {/if}
+      <fieldset data-step={index} class:active={index === currentStep}>
+        <legend>{question.legend}</legend>
+        {#each question.options as option}
+          <div class="answers">
+            <label class="radio-button">
+              <input
+                type="radio"
+                name={question.name}
+                value={option.value}
+                checked={selectedAnswers[index] === option.value}
+                on:change={() => handleSelect(option.value)}
+              />
+              {option.labelText}
+            </label>
+          </div>
+        {/each}
+      </fieldset>
     {/each}
   </div>
 
-  <button
-    class="curButton"
-    type="button"
-    on:click={prevStep}
-    disabled={currentStep === 0}
-  >
+  <button type="button" on:click={prevStep} disabled={currentStep === 0}>
     Terug
   </button>
 
-  <button
-    type="button"
-    class="radio-button skip-button"
-    on:click={skipQuestion}
-  >
-    Overslaan
-  </button>
+  <button type="button" on:click={skipQuestion}> Overslaan </button>
 
   {#if currentStep === surveyData.length - 1}
     <button type="submit">Bekijk uw resultaat</button>
   {/if}
 
-  <button class="submitButton" type="submit">Submit</button>
+  <button type="submit" class="submitButton">Submit</button>
 </form>
 
 <style>
+  [data-step] {
+    display: block;
+  }
+
+  :global(.js-enhanced) [data-step] {
+    display: none;
+  }
+
+  :global(.js-enhanced) [data-step].active {
+    display: block;
+  }
   legend {
     font-size: 20px;
     font-weight: bolder;
@@ -114,7 +129,6 @@
     font-size: 16px;
   }
 
-  /* Hover effect */
   .radio-button:hover {
     border-color: #999;
     background-color: rgba(125, 66, 74, 0.7) 100%;
