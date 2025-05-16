@@ -59,13 +59,17 @@ section {
   margin-inline: -1.25rem;
   padding-inline: 2rem;
   anchor-name: --carousel;
-  overflow-x: auto;
+  overflow: scroll;
   scroll-snap-type: x mandatory;
-  scroll-marker-group: after;
   scroll-behavior: smooth;
   scrollbar-width: none;
   overscroll-behavior-x: contain;
-  &::scroll-marker-group {
+}
+
+@supports (scroll-marker-group: after) {
+  .card-wrapper {
+    scroll-marker-group: after;
+    &::scroll-marker-group {
       position: fixed;
       position-anchor: --carousel;
       position-area: block-end;
@@ -74,21 +78,22 @@ section {
       grid-auto-columns: 0.75rem;
       grid-auto-flow: column;
       gap: 0.25rem;
-  }
-  > li::scroll-marker {
+    }
+    > li::scroll-marker {
       content: ' ';
       cursor: pointer;
       aspect-ratio: 1;
       border-radius: 50%;
       background-color: #383838;
-  }
-  > li::scroll-marker:target-current {
+    }
+    > li::scroll-marker:target-current {
       background-color: #CDCDCD;
-  }
-  @media (min-width: 1024px) {
+    }
+    @media (min-width: 1024px) {
       scroll-marker-group: none;
       margin-inline: 0;
       padding-inline: 0;
+    }
   }
 }
 
