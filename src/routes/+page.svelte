@@ -10,7 +10,7 @@
         <MeshgradCarousel/>
         
         <article>
-            <h1 class="">Welkom bij Drop & Heal</h1>
+            <h1 class="">Beleave</h1>
             <p>Op basis van de analyse sluit de rouwtaak het verlies een betekenisvolle plek geven op dit moment het beste bij jou aan. 
                 We hebben een oefening voor je beschikbaar die je hiermee op weg kan helpen. </p>
         </article>
