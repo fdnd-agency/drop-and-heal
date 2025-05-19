@@ -114,8 +114,7 @@ section {
   overscroll-behavior-x: contain;
 
   @media (min-width: 1024px) {
-      margin-inline: 0;
-      padding-inline: 0;
+    padding-inline: 1.25rem;
   }
   
 }
@@ -205,25 +204,8 @@ section {
     }
     @media (min-width: 1024px) {
       scroll-marker-group: none;
-      margin-inline: 0;
-      padding-inline: 0;
     }
   }
 }
 
-
-@keyframes foo {
-  from {
-    opacity: 0.5;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.card-wrapper li{
-  animation: foo linear both;
-  animation-range: 0% 50%;
-  animation-timeline: view(inline);
-}
 </style>

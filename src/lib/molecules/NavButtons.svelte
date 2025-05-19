@@ -18,7 +18,7 @@
 <div class="nav-buttons {layoutClass}">
     {#if leftLink}
         <a href={leftLink} class="nav-link">
-            <ArrowL /> <span></span> Vorige
+            <ArrowL /> <span></span> Terug
         </a>
     {/if}
     {#if rightLink}
@@ -34,6 +34,11 @@
         justify-content: space-between;
         align-items: center;
         width: 100%;
+        margin-bottom: 0.5rem;
+
+        @media (min-width: 1024px) {
+            position: relative;
+        }
     }
     .nav-buttons.left-only {
         justify-content: flex-start;

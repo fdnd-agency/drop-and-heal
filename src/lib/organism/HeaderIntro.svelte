@@ -1,30 +1,31 @@
 <script>
-    export let headerText_l1 = "Drop and heal"; 
-    export let headerText_l2 = "Introductie";
+    export let headerText = ""; 
     export let progressValue = 0; 
     export let progressMax = 100; 
 </script>
 
 <header class="header">
-    <h3>{headerText_l1}<br>{headerText_l2}</h3>
-    <div class="progress-container" aria-busy="true" aria-describedby="progress-bar">
-        <progress id="progress-bar" value={progressValue} max={progressMax}></progress>
-    </div>
+    <h1>{headerText}</h1>
 </header>
 
 <style>
     .header {
-        text-align: left;
-        align-self: flex-start;
-        width: 100%;
-        margin-top: 2rem;
-    }
+        display: none;
 
-    .header h3 {
-        font-family: Calvino-Grande;
-        font-size: 2em;
-        font-weight: 100;
-        margin-bottom: 1rem;
+        @media (min-width: 1024px) {
+            display: block;
+            text-align: left;
+            align-self: flex-start;
+            width: 100%;
+            margin-top: 1rem;
+
+            h1 {
+                background-color: #232323;
+                padding: 1rem 1.5rem;
+                border-radius: 0.75rem;
+                border: 1px solid #2E2E2E;
+            }
+        }
     }
 
     .progress-container {
@@ -56,14 +57,4 @@
         background-color: white;
         border-radius: 10px;
     }
-
-    @media (min-width: 65rem){
-        .header {
-            padding: 0 2rem 0 2rem;
-        }
-
-        .header h3 {
-            font-size: 50px;
-        }
-    } 
 </style>
