@@ -5,7 +5,7 @@
 </script>
 
 <main>
-  <h1>Vragenlijst</h1>
+  <!-- <h1>Vragenlijst</h1> -->
 
   <QuestionForm {surveyData} />
 
@@ -13,12 +13,12 @@
 </main>
 
 <style>
-  h1 {
+  /* h1 {
     font-family: Calvino Grande;
     z-index: 10;
     font-size: clamp(2.2rem, 10vw, 3.5rem);
     font-weight: 800;
-  }
+  } */
 
   main {
     background-color: #1d1d1d;
