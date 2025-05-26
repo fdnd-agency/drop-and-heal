@@ -1,88 +1,77 @@
 <script>
-  import Header from "../../lib/components/Header.svelte";
-  import Card from "../../lib/components/Card.svelte";
-  import { MeshgradRed } from "$lib";
-  import Nav from "../../lib/components/Nav.svelte";
+  import { Header, Nav, Card, MeshgradRed } from "$lib";
 </script>
 
-  <Header title="Het verlies aanvaarden" progressColor="#984a4a" />
+<Header title="Het verlies aanvaarden" progressColor="#984a4a" />
 
-  <main>
-    <MeshgradRed class="meshgrad" />
-    <h2>Rouwstappen van de dag</h2>
-    <h4>2 oefeningen open vandaag</h4>
-  </main>
+<main>
+  <MeshgradRed class="meshgrad" />
+  <h2>Rouwstappen van de dag</h2>
+  <h4>2 oefeningen open vandaag</h4>
+</main>
 
-  <section class="exercises">
-    <Card
-      imageSrc="/icon/rouwtaak-2-foto.png"
-      imageAlt="Rouwtaak Foto"
-      actionText="Start oefening"
-      description="Oefening"
-      title="Emoties herkennen"
-      buttonColor="#984a4a"
-      communityDrops="47"
-      communityImages={[
-        "/icon/community1.png",
-        "/icon/community2.png",
-        "/icon/community3.png",
-      ]}
-    />
-    <Card
-      imageSrc="/icon/rouwtaak-2-foto.png"
-      imageAlt="Rouwtaak Foto"
-      actionText="Start oefening"
-      description="Oefening"
-      title="Emoties herkennen"
-      buttonColor="#984a4a"
-      communityDrops="47"
-      communityImages={[
-        "/icon/community1.png",
-        "/icon/community2.png",
-        "/icon/community3.png",
-      ]}
-    />
-    <Card
-      imageSrc="/icon/rouwtaak-2-foto.png"
-      imageAlt="Rouwtaak Foto"
-      actionText="Start oefening"
-      description="Oefening"
-      title="Emoties herkennen"
-      buttonColor="#984a4a"
-      communityDrops="47"
-      communityImages={[
-        "/icon/community1.png",
-        "/icon/community2.png",
-        "/icon/community3.png",
-      ]}
-    />
-    <Card
-      imageSrc="/icon/rouwtaak-2-foto.png"
-      imageAlt="Rouwtaak Foto"
-      actionText="Start oefening"
-      description="Oefening"
-      title="Emoties herkennen"
-      buttonColor="#984a4a"
-      communityDrops="47"
-      communityImages={[
-        "/icon/community1.png",
-        "/icon/community2.png",
-        "/icon/community3.png",
-      ]}
-    />
-  </section>
+<section class="exercises">
+  <Card
+    imageSrc="/icon/rouwtaak-2-foto.png"
+    imageAlt="Rouwtaak Foto"
+    actionText="Start oefening"
+    description="Oefening"
+    title="Emoties herkennen"
+    buttonColor="#7a3535"
+    communityDrops="47"
+    communityImages={[
+      "/icon/community1.png",
+      "/icon/community2.png",
+      "/icon/community3.png",
+    ]}
+  />
+  <Card
+    imageSrc="/icon/rouwtaak-2-foto.png"
+    imageAlt="Rouwtaak Foto"
+    actionText="Start oefening"
+    description="Oefening"
+    title="Emoties herkennen"
+    buttonColor="#7a3535"
+    communityDrops="47"
+    communityImages={[
+      "/icon/community1.png",
+      "/icon/community2.png",
+      "/icon/community3.png",
+    ]}
+  />
+  <Card
+    imageSrc="/icon/rouwtaak-2-foto.png"
+    imageAlt="Rouwtaak Foto"
+    actionText="Start oefening"
+    description="Oefening"
+    title="Emoties herkennen"
+    buttonColor="#7a3535"
+    communityDrops="47"
+    communityImages={[
+      "/icon/community1.png",
+      "/icon/community2.png",
+      "/icon/community3.png",
+    ]}
+  />
+  <Card
+    imageSrc="/icon/rouwtaak-2-foto.png"
+    imageAlt="Rouwtaak Foto"
+    actionText="Start oefening"
+    description="Oefening"
+    title="Emoties herkennen"
+    buttonColor="#7a3535"
+    communityDrops="47"
+    communityImages={[
+      "/icon/community1.png",
+      "/icon/community2.png",
+      "/icon/community3.png",
+    ]}
+  />
+</section>
 
-  <Nav />
+<Nav />
 
 <style>
-  *::-webkit-scrollbar {
-    display: none;
-  }
-
-  body {
-    background: rgb(17, 17, 17);
-  }
-
   h2 {
     font-family: Calvino;
     font-size: 2em;
@@ -90,13 +79,18 @@
 
   main {
     position: relative;
-    background-color: var(--b);
-    background-image: url("/gradients/Gr-red.png");
+    background-color: var(--black);
+    background-image: radial-gradient(
+        circle,
+        rgba(188, 51, 69, 0.6) 0%,
+        rgba(188, 51, 69, 0.4) 20%,
+        rgba(188, 51, 69, 0.1) 50%,
+        rgba(17, 17, 17, 0.8) 100%
+    );
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     color: white;
-    justify-content: center;
     text-align: center;
     padding-top: 5em;
     padding-bottom: 2em;
@@ -109,7 +103,7 @@
   }
 
   main h4 {
-    color: grey;
+    color: rgb(225, 223, 223);
   }
 
   .exercises {

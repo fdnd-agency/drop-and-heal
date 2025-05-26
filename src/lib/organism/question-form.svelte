@@ -95,9 +95,9 @@
 
   button {
     background-color: transparent;
-    border: .1em solid var(--b-z);
+    border: .1em solid var(--border-grey);
     border-radius: 1em;
-    color: var(--w);
+    color: var(--white);
     cursor: pointer;
     font-size:clamp(1rem, 5vw, 1.2rem);
     padding: 1em 1.5em;
@@ -106,19 +106,19 @@
   }
 
   button:active {
-    background-color: var(--w);
-    border: .1em solid var(--w);
-    color: var(--b);
+    background-color: var(--white);
+    border: .1em solid var(--white);
+    color: var(--black);
   }
 
   button:hover {
-    background-color: var(--b-h);
-    border: .1em solid var(--w);
-    color: var(--b);
+    background-color: var(--border-grey);
+    border: .1em solid var(--white);
+    color: var(--black);
   }
 
   button:focus-within {
-    outline: 3px solid var(--b-f);
+    outline: 3px solid var(--border-pink);
   }
 
   .curButton:disabled {

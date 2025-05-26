@@ -14,7 +14,7 @@
   }
 
   label {
-    border: 1px solid var(--b-z);
+    border: 1px solid var(--border-grey);
     border-radius: 30px;
     cursor: pointer;
     font-size: 1.25em;
@@ -28,18 +28,18 @@
   }
 
   label:has(input[type=radio]:hover) {
-    background-color: var(--b-h);
-    border: .1em solid var(--w);
-    color: var(--b);
+    background-color: var(--border-grey);
+    border: .1em solid var(--white);
+    color: var(--black);
   }
 
   label:has(input[type=radio]:checked) {
-    background-color: var(--w);
-    border: .1em solid var(--w);
-    color: var(--b);
+    background-color: var(--white);
+    border: .1em solid var(--white);
+    color: var(--black);
   }
 
   label:focus-within {
-    outline: 3px solid var(--b-f);
+    outline: 3px solid var(--border-pink);
   }
 </style>

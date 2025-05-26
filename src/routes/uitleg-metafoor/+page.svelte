@@ -1,13 +1,11 @@
 <script>
-    import MeshBlue from '$lib/meshgrad-blue-static.svelte';
-    import BlurgradBlue from '$lib/blurgrad-blue.svelte';
-    import NavButtons from '$lib/NavButtons.svelte';
+    import {BlurgradBlue, MeshgradBlueStatic, NavButtons} from "$lib";
 </script>
 
 
 <main class="main-content">
     <div class="background-image">
-        <MeshBlue />
+        <MeshgradBlueStatic />
     </div>
     <section class="intro-main">
         <article class="intro-content">

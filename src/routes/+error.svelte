@@ -1,7 +1,6 @@
 <script>
-    import HeaderIntro from '$lib/HeaderIntro.svelte';
     import { page } from '$app/stores';
-    import MeshCarousel from '$lib/molecules/meshgrad-carousel.svelte';
+    import { MeshgradCarousel } from '$lib';
 </script>
 
 <main>
@@ -9,7 +8,7 @@
     <h2>Whoops! Er is iets fout gegaan</h2>
 
     <div class="animation-carousel">
-        <MeshCarousel />
+        <MeshgradCarousel />
     </div>   
 
     <h2>Deze pagina is: {$page.error?.message} </h2>
@@ -20,8 +19,8 @@
 
     main {
         display: flex;
-        color: var(--w);
-        background-color: var(--b);
+        color: var(--white);
+        background-color: var(--black);
         padding: 2em;
         width: 100%;
         min-height: 100vh;
