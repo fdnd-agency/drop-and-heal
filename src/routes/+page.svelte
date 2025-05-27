@@ -38,6 +38,10 @@ section {
         display: grid;
         gap: 2em;
 
+        h1 {
+            font-size: clamp(32px, 1.527vw + 26px, 48px);
+        }
+
         p {
             @media (min-width:625px) {
                 width: 60%;

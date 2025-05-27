@@ -60,9 +60,6 @@ h2,
 h3 {
   font-family: Calvino-Grande;
 }
-h1 {
-  font-size: clamp(32px, 1.527vw + 26px, 48px);
-}
 h4 {
   font-family: Figtree;
 }

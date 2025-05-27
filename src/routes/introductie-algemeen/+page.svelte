@@ -45,6 +45,7 @@ section {
     margin: auto; 
     position: relative; 
     h1 {
+      font-size: clamp(32px, 1.527vw + 26px, 48px);
       background-color: #232323;
       padding: 1rem 1.5rem;
       border-radius: 0.75rem;

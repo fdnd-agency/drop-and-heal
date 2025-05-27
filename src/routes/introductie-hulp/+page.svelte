@@ -7,7 +7,7 @@
 <svelte:window bind:innerWidth />
 <main>
   <section class="introduction-help">
-    <a href="/introductie-rouwtaken/4"><ArrowL/></a>
+    <a href="/introductie-rouwtaken/4" aria-label="Go back"><ArrowL/></a>
     <header>
       <h1>Hulp op maat, of liever zelf kiezen?</h1>
       <p> Nu je meer weet over de rouwtaken, is het tijd om jouw persoonlijke reis te starten. Iedereen rouwt op zijn eigen manier. Daarom helpen we je graag kiezen wat op dit moment het beste bij jou past.</p>
@@ -24,7 +24,7 @@
       <article>
         <h2>Liever zelf kiezen waar je start?</h2>
         <p>Voel je je al zeker over wat je nodig hebt? Blader dan rustig door de rouwtaken en kies zelf de taak die op dit moment het meest aansluit bij jouw gevoel of situatie.</p>
-        <a href="/form-intro">Zelf kiezen</a>
+        <a href="/multiple-task-1">Zelf kiezen</a>
       </article>
     </section>
 
@@ -71,6 +71,10 @@
       gap: 1.25rem;
       @media (min-width: 1024px) {
         text-align: center;
+      }
+
+      h1 {
+        font-size: clamp(32px, 1.527vw + 26px, 48px);
       }
 
       p {
