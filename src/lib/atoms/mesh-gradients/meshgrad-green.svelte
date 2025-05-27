@@ -3,7 +3,7 @@
 <style>
     img {
         animation: aGreen 4s ease-in-out infinite;
-        height: 16em;
+        height: 10em;
         order: -1;
         object-fit: contain;
         width: 100%;
@@ -19,10 +19,4 @@
             transform: scale(1.1); 
         }
     }
-
-
-    @media (min-width:875px) {
-        img { height: 13em; }
-    }
-
 </style>
