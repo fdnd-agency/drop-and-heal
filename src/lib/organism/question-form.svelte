@@ -52,7 +52,7 @@
         <label class="radio-button">
           <input
             type="radio"
-            name={question.name}
+            name={question.value}
             value={option.value}
             checked={selectedAnswers[index] === option.value}
             on:change={() => handleSelect(option.value)}
@@ -79,16 +79,13 @@
 </form>
 
 <style>
-  [data-step] {
-    display: block;
-  }
-
-  :global(.js-enhanced) [data-step] {
-    display: none;
-  }
-
-  :global(.js-enhanced) [data-step].active {
-    display: block;
+  fieldset {
+    border: none;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 300px;
   }
 
   legend {
@@ -102,6 +99,16 @@
     padding-left: 0.6em;
     padding-bottom: 0.8em;
     max-width: 999px;
+    @media (min-width: 50rem) {
+      font-size: 28px;
+      text-align: center;
+    }
+  }
+
+  label {
+    @media (min-width: 50rem) {
+      min-width: 660px;
+    }
   }
 
   input[type="radio"] {
@@ -122,6 +129,18 @@
     text-align: left;
     line-height: 2;
     font-weight: lighter;
+    @media (min-width: 50rem) {
+      width: 660px;
+    }
+    &:hover {
+      border-color: #999;
+      background-color: rgba(125, 66, 74, 0.7) 100%;
+    }
+  }
+
+  div {
+    display: flex;
+    justify-content: center;
   }
 
   .radio-button input[type="radio"]:checked,
@@ -131,39 +150,6 @@
     color: rgba(33, 33, 33, 1);
     font-weight: 600;
     font-size: 16px;
-  }
-
-  .radio-button:hover {
-    border-color: #999;
-    background-color: rgba(125, 66, 74, 0.7) 100%;
-  }
-
-  fieldset {
-    border: none;
-    text-align: start;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 352px;
-  }
-
-  .radio-button {
-    @media (min-width: 50rem) {
-      width: 660px;
-    }
-  }
-
-  legend {
-    @media (min-width: 50rem) {
-      font-size: 32px;
-      text-align: center;
-    }
-  }
-
-  label {
-    @media (min-width: 50rem) {
-      min-width: 660px;
-    }
   }
 
   .form-buttons {
@@ -185,6 +171,18 @@
     border-radius: 12px;
     background-color: rgba(33, 33, 33, 1);
     cursor: pointer;
+  }
+
+  [data-step] {
+    display: block;
+  }
+
+  :global(.js-enhanced) [data-step] {
+    display: none;
+  }
+
+  :global(.js-enhanced) [data-step].active {
+    display: block;
   }
 
   @media (scripting: enabled) {
