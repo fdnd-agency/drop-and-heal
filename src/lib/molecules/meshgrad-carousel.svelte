@@ -7,16 +7,23 @@
   
   <style>
     .carousel {
-        position: relative; 
+        position: absolute; 
         width: 100%;
         height: 100%;
-        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        opacity: 0.5;
+        pointer-events: none;
+
+        @media (min-width: 768px) {
+            justify-content: flex-end;
+            align-items: center;
+        }
     }
   
     .gradient {
         position: absolute;
-        width: 100%;
-        height: 100%;
+        width: 300px;
         object-fit: contain;
         filter: brightness(0.9);
         animation: fade 20s infinite;
