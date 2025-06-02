@@ -10,7 +10,7 @@
         <MeshgradCarousel/>
         
         <article>
-            <h1 class="">Beleave</h1>
+            <h1 class="">Beleave.</h1>
             <p>Op basis van de analyse sluit de rouwtaak het verlies een betekenisvolle plek geven op dit moment het beste bij jou aan. 
                 We hebben een oefening voor je beschikbaar die je hiermee op weg kan helpen. </p>
         </article>
@@ -39,7 +39,7 @@ section {
         gap: 2em;
 
         h1 {
-            font-size: clamp(32px, 1.527vw + 26px, 48px);
+            font-size: clamp(76px, 1.91vw + 68.5px, 96px);
         }
 
         p {

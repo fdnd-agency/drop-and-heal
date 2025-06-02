@@ -132,7 +132,7 @@ section {
   scroll-snap-align: center;
 }  
 .card > p {
-  color: #8F8F8F;
+  color: #AFAFAF;
 }
 .card article {
   display: grid;
