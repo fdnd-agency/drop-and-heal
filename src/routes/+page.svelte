@@ -30,6 +30,7 @@ section {
     justify-content: center;
     gap: 4rem;
     height: 100vh;
+    height: 100dvh;
     max-width: 1085px;
     margin: auto;
     position: relative;

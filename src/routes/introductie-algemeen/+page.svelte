@@ -41,6 +41,7 @@ section {
     justify-content: center;
     gap: 4.75rem;
     height: 100vh;
+    height: 100dvh;
     max-width: 1085px;
     margin: auto; 
     position: relative; 
@@ -106,10 +107,15 @@ section {
     border-radius: 0.75em;
     border: 1px solid #2E2E2E;
     background-color: #232323;
-    height: 368px;
+    aspect-ratio: 3 / 4;
+    height: 100%;
     min-width: 300px;
     width: clamp(300px, 4.106vw + 283.85px, 343px);
     scroll-snap-align: center;
+
+    @media (min-width: 1024px) {
+      height: 368px;
+    }
 }
 
 

@@ -88,6 +88,7 @@ section {
   flex-direction: column;
   justify-content: space-around;
   height: 100vh;
+  height: 100dvh;
   max-width: 1295px;
   margin: auto; 
   position: relative; 
