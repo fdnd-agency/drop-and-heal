@@ -7,8 +7,6 @@
 
 <main>
   <section class="main-content">
-
-    <BlurgradPink customStyles={"top: -10%; left: 50%; transform: translate(-50%, -50%);"}/>
     <h1>Introductie Algemeen</h1>
     
     <ul class="card-wrapper">

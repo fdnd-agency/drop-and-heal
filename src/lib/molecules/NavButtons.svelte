@@ -3,7 +3,6 @@
 
     export let leftLink = "#"; 
     export let rightLink = "#"; 
-    export let borderColor = "#FFFFFF";
 
     $: layoutClass =
         leftLink && rightLink

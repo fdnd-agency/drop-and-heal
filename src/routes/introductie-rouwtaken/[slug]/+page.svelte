@@ -1,5 +1,6 @@
 <script>
   import { page } from '$app/stores';
+  import { browser } from '$app/environment';
   import { onMount } from 'svelte';
   import {HeaderIntro, MeshgradBlue, MeshgradRed, MeshgradGreen, MeshgradPink, NavButtons} from "$lib";
   export let data;
@@ -13,10 +14,8 @@
   };
 
   let cardWrapper;
-  let jsEnabled = false;
   let isDesktop = false;
   onMount(() => {
-    jsEnabled = true;
     isDesktop = window.matchMedia('(min-width: 1024px)').matches;
   });
 
@@ -28,7 +27,7 @@
 
   $: nextLink = currentIndex < tasks.length - 1
     ? `/introductie-rouwtaken/${tasks[currentIndex + 1].id}`
-    : "/introductie-hulp"
+    : "/introductie-hulp";
 
   $: {
     if (cardWrapper && currentIndex >= 0) {
@@ -68,7 +67,7 @@
     </div>
 
     
-    {#if jsEnabled && !isDesktop}
+    {#if browser && !isDesktop}
       <NavButtons 
         leftLink={prevLink}
         rightLink={nextLink}
