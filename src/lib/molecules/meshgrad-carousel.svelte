@@ -1,22 +1,29 @@
 <div class="carousel">
-    <img src="/gradients/Meshgrad-blue.png" alt="Blue gradient" class="gradient gradient-1" />
-    <img src="/gradients/Meshgrad-red.png" alt="Red gradient" class="gradient gradient-2" />
-    <img src="/gradients/Meshgrad-green.png" alt="Green gradient" class="gradient gradient-3" />
-    <img src="/gradients/Meshgrad-pink.png" alt="Pink gradient" class="gradient gradient-4" />
+    <img src="/gradients/Meshgrad-blue.webp" alt="Blue gradient" class="gradient gradient-1" />
+    <img src="/gradients/Meshgrad-red.webp" alt="Red gradient" class="gradient gradient-2" />
+    <img src="/gradients/Meshgrad-green.webp" alt="Green gradient" class="gradient gradient-3" />
+    <img src="/gradients/Meshgrad-pink.webp" alt="Pink gradient" class="gradient gradient-4" />
 </div>
   
   <style>
     .carousel {
-        position: relative; 
+        position: absolute; 
         width: 100%;
         height: 100%;
-        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        opacity: 0.5;
+        pointer-events: none;
+
+        @media (min-width: 768px) {
+            justify-content: flex-end;
+            align-items: center;
+        }
     }
   
     .gradient {
         position: absolute;
-        width: 100%;
-        height: 100%;
+        width: 300px;
         object-fit: contain;
         filter: brightness(0.9);
         animation: fade 20s infinite;
