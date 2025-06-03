@@ -11,12 +11,19 @@
         padding-bottom: 1rem;
     }
 
-    @keyframes aPink {
-        0%, 100% {
-            transform: scale(1); 
-        }
-        50% {
-            transform: scale(1.1); 
-        }
+  @keyframes aPink {
+    0%,
+    100% {
+      transform: scale(1);
     }
+    50% {
+      transform: scale(1.1);
+    }
+  }
+
+  @media (min-width: 875px) {
+    img {
+      height: 13em;
+    }
+  }
 </style>

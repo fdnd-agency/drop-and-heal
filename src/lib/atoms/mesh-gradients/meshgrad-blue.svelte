@@ -10,13 +10,19 @@
         z-index: 5;
         padding-bottom: 1rem;
     }
-
-    @keyframes aBlue {
-        0%, 100% {
-            transform: scale(1); 
-        }
-        50% {
-            transform: scale(1.1); 
-        }
+  @keyframes aBlue {
+    0%,
+    100% {
+      transform: scale(1);
     }
+    50% {
+      transform: scale(1.1);
+    }
+  }
+
+  @media (min-width: 875px) {
+    img {
+      height: 13em;
+    }
+  }
 </style>
