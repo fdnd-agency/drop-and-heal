@@ -1,4 +1,4 @@
-<img src="/gradients/Meshgrad-red.png" alt="" width="100" height="100" />
+<img src="/gradients/Meshgrad-red.webp" alt="" width="100" height="100" />
 
 <style>
   img {
@@ -10,13 +10,19 @@
     z-index: 5;
     padding-bottom: 1rem;
   }
+  @keyframes aRed {
+    0%,
+    100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+  }
 
-  /* @keyframes aRed {
-        0%, 100% {
-            transform: scale(1); 
-        }
-        50% {
-            transform: scale(1.1); 
-        }
-    } */
+  @media (min-width: 875px) {
+    img {
+      height: 10em;
+    }
+  }
 </style>

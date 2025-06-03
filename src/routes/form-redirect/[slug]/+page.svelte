@@ -126,7 +126,7 @@
   .pink-theme {
     --rt: #7c6097;
   }
-
+  
   main {
     position: relative;
     display: flex;

@@ -1,7 +1,9 @@
 <script>
-  export let data;
   import { page } from '$app/stores';
+  import { browser } from '$app/environment';
+  import { onMount } from 'svelte';
   import {HeaderIntro, MeshgradBlue, MeshgradRed, MeshgradGreen, MeshgradPink, NavButtons} from "$lib";
+  export let data;
   const { tasks } = data;
 
   const themeComponents = {
@@ -11,8 +13,13 @@
     pink: MeshgradPink
   };
 
+  let cardWrapper;
+  let isDesktop = false;
+  onMount(() => {
+    isDesktop = window.matchMedia('(min-width: 1024px)').matches;
+  });
+
   $: currentIndex = tasks.findIndex(task => task.id == $page.params.slug);
-  $: progressValue = ((currentIndex + 1) / tasks.length) * 100;
 
   $: prevLink = currentIndex > 0
     ? `/introductie-rouwtaken/${tasks[currentIndex - 1].id}`
@@ -20,133 +27,185 @@
 
   $: nextLink = currentIndex < tasks.length - 1
     ? `/introductie-rouwtaken/${tasks[currentIndex + 1].id}`
-    : "/introductie-hulp"
+    : "/introductie-hulp";
+
+  $: {
+    if (cardWrapper && currentIndex >= 0) {
+      const activeCard = cardWrapper.children[currentIndex];
+      activeCard?.scrollIntoView();
+    }
+  }
 </script>
 
 <main>
-  <HeaderIntro headerText_l1="Introductie" headerText_l2="rouwtaken" progressValue={progressValue} />
+  <section>
+    <HeaderIntro headerText="Introductie rouwtaken"/>
+    <div class="carousel">
+      <ul class="card-wrapper" bind:this={cardWrapper}>
+        {#each tasks as task, i}
+          <li class="card" id={`${task.id}`}>
+            <article>
+              {#if themeComponents[task.theme]}
+                <svelte:component this={themeComponents[task.theme]} />
+              {/if}
+              <h2>Rouwtaak <em>{task.number}</em></h2>
+              <p>{task.description}</p>
+            </article>
+            <p>Waarbij je leert omgaan met nieuwe keuzes en mogelijkheden</p>
+          </li>
+        {/each}
+      </ul>
+      <nav class="dot-nav">
+        <ul>
+          {#each tasks as task, i}
+            <li class:active={task.id == $page.params.slug}>
+              <a href={`#${task.id}`} aria-label={`Ga naar taak ${i + 1}`}></a>
+            </li>
+          {/each}
+        </ul>
+      </nav>
+    </div>
 
-  <section class="intro-content">
-    {#each tasks as task, index}
-      <article class={index === currentIndex ? "active" : ""}>
-        <h2>Rouwtaak <em>{task.number}</em></h2>
-        <h4>{task.title}</h4>
-        <p>{task.description}</p>
-        {#if themeComponents[task.theme]}
-          <svelte:component this={themeComponents[task.theme]} />
-        {/if}
-      </article>
-    {/each}
+    
+    {#if browser && !isDesktop}
+      <NavButtons 
+        leftLink={prevLink}
+        rightLink={nextLink}
+      />
+    {:else}
+      <NavButtons 
+        leftLink="/introductie-algemeen"
+        rightLink="/introductie-hulp"
+      />
+    {/if}
   </section>
-
-  <NavButtons 
-    leftLink={prevLink}
-    rightLink={nextLink}
-    borderColor="var(--white)" 
-  />
 </main>
 
 <style>
-  main {
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    min-block-size: 100dvh;
-    gap: 2rem;
-    align-items: center;
-    color: var(--white);
-    background-color: var(--black);
-    width: 100%;
-    height: 100vh;
-    overflow-y: auto;
-    padding: 2rem;
-    position: relative;
-    @media (min-width: 45rem) {
-      overflow: hidden;
-    }
-  }
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100vh;
+  height: 100dvh;
+  max-width: 1295px;
+  margin: auto; 
+  position: relative; 
+  padding-top: 1rem;
 
-  .intro-content {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 8rem;
-    padding: 8rem 0rem 5% 0rem;
-    justify-items: center;
-    @media (min-width: 45rem) {
-      grid-template-columns: repeat(4, 1fr);
-      gap: 3rem;
-      padding: 1rem 3rem 0 3rem;
-    }
-  }
-
-  article,
-  article.active {
-    display: flex;
-    flex-direction: column;
+  @media (min-width: 1024px) {
+    padding-top: 0;
+    gap: 2em;
     justify-content: center;
-    transition: all 1s ease;
-    @media (min-width: 45rem) {
-      width: 100%;
-      margin-bottom: 1rem;
-      max-width: 13rem;
-      max-height: 30rem;
-      opacity: 0.6;
-      filter: brightness(0.7);
-    }
-    &:hover {
-      opacity: 1;
-      filter: none;
-      transform: scale(1.4);
-    }
   }
+}
 
-  article p {
-    color: var(--grey);
-    @media (min-width: 45rem) {
-      font-size: 12px;
-      line-height: 1.2rem;
-      margin-bottom: 0.2rem;
-      margin-top: 0;
-    }
+.card-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: clamp(1.5rem, 1.527vw + 18px, 2.5rem);
+  margin-inline: -1.25rem;
+  padding-inline: 3.25rem;
+  anchor-name: --carousel;
+  overflow: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  overscroll-behavior-x: contain;
+
+  @media (min-width: 1024px) {
+    padding-inline: 1.25rem;
   }
+  
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.25em;
+  border-radius: 0.75em;
+  border: 1px solid #2E2E2E;
+  background-color: #232323;
+  height: min(65.06vh, 614px);
+  width: clamp(294px, -1.05vw + 309.13px, 305px);
+  flex-shrink: 0;
+  scroll-snap-align: center;
+}  
+.card > p {
+  color: #AFAFAF;
+}
+.card article {
+  display: grid;
+  gap: 1.5rem;
+}
+.card article h2 {
+  font-size: 2.5rem;
+  border-bottom: 1px solid #2C2C2C;
+  padding-bottom: 1rem;
+}
+.dot-nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
 
-  article h2 {
-    margin-top: 1.5rem;
-    @media (min-width: 45rem) {
-      font-size: 27px;
-      margin-bottom: 0.2rem;
-      margin-top: 0;
-    }
-  }
-
-  @media (min-width: 45rem) {
-    article h4 {
-      font-size: 14px;
-      margin-bottom: 0.2rem;
-    }
-
-    article em {
-      font-size: 22px;
-    }
-
-    article h2,
-    article h4,
-    article p {
+   @media (min-width: 1024px) {
       display: none;
     }
+}
+.dot-nav ul {
+  display: flex;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+}
+.dot-nav a {
+  display: block;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background-color: #383838;
+  text-indent: -9999px;
+}
+.dot-nav a:focus,
+.dot-nav a:hover {
+  border: 1px solid #CDCDCD;
+  outline: none;
+}
 
-    article.active h2,
-    article.active h4,
-    article.active p,
-    article:hover h2,
-    article:hover h4,
-    article:hover p  {
-      display: block;
-      opacity: 1;
+.dot-nav li.active a {
+  background-color: #CDCDCD;
+}
+
+@supports (scroll-marker-group: after) {
+    .dot-nav {
+      display: none;
     }
-
-    article.active {
-      opacity: 1;
-      filter: brightness(1);
+  .card-wrapper {
+    scroll-marker-group: after;
+    &::scroll-marker-group {
+      position: fixed;
+      position-anchor: --carousel;
+      position-area: block-end;
+      margin: 1rem;
+      display: grid;
+      grid-auto-columns: 0.75rem;
+      grid-auto-flow: column;
+      gap: 0.25rem;
+    }
+    > li::scroll-marker {
+      content: ' ';
+      cursor: pointer;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background-color: #383838;
+    }
+    > li::scroll-marker:target-current {
+      background-color: #CDCDCD;
+    }
+    @media (min-width: 1024px) {
+      scroll-marker-group: none;
     }
   }
+}
+
 </style>

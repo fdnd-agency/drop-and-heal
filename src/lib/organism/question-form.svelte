@@ -1,168 +1,193 @@
 <script>
-  import QuestionSet from '../molecules/question-set.svelte';
+  export let surveyData = [];
+  import { onMount } from "svelte";
+
   let currentStep = 0;
-
-  let questions = [{
-    legend: "Hoe denk je over het verlies?",
-    name: "question1",
-    class:"show={current === 1} class:hide={current != 1}",
-    options: [
-      {value: "f1-i-1", labelText: "Ik voel intens verdriet of pijn wanneer ik aan het verlies denk."},
-      {value: "f1-i-2", labelText: "Het voelt nog steeds onwerkelijk, alsof het niet echt is gebeurd."},
-      {value: "f1-i-3", labelText: "Ik probeer manieren te vinden om mijn dagelijkse leven aan te passen."},
-      {value: "f1-i-4", labelText: "Ik begin de persoon een plek te geven in mijn herinneringen en probeer door te gaan."}
-    ]
-  },
-  {
-    class:"show={current === 2} class:hide={current != 2}",
-    legend: "Hoe vaak ervaar je emotionele pijn gerelateerd aan het verlies?",
-    name: "question2",
-    options: [
-      { value: "f2-i-1", labelText: "Vrijwel constant voel ik verdriet en rouw."},
-      { value: "f2-i-2", labelText: "Soms voel ik pijn, maar ik probeer verder te gaan."},
-      { value: "f2-i-3", labelText: "Het wordt minder intens en ik vind troost in herinneringen."},
-      { value: "f2-i-4", labelText: "Ik voel geen sterke emoties over het verlies, meer verwarring."}
-    ]
-  },
-  {    
-    class:"show={current === 3} class:hide={current != 3}",
-    legend: "Hoe kijk je naar een toekomst zonder je dierbare?",
-    name: "question3",
-    options: [
-      { value: "f3-i-1", labelText: "Ik kan me een toekomst zonder hen niet voorstellen."},
-      { value: "f3-i-2", labelText: "Ik probeer nieuwe routines te ontwikkelen zonder hen."},
-      { value: "f3-i-3", labelText: "Ik begin hoop te zien voor de toekomst en herinner me hen met liefde."},
-      { value: "f3-i-4", labelText: "Ik voel me overweldigd door het verdriet en kan niet aan de toekomst denken."}
-    ]
-  }]
-
-  function nextStep() {
-    if (currentStep < questions.length - 1) currentStep++;
-  }
+  let selectedAnswers = Array(surveyData.length).fill(undefined);
 
   function prevStep() {
-    if (currentStep > 0) currentStep--;
+    if (currentStep > 0) {
+      currentStep -= 1;
+    }
+  }
+
+  function skipQuestion() {
+    selectedAnswers[currentStep] = null;
+    nextStep();
+  }
+
+  function nextStep() {
+    if (currentStep < surveyData.length - 1) {
+      currentStep += 1;
+    }
+  }
+
+  function handleSelect(optionValue) {
+    selectedAnswers[currentStep] = optionValue;
+    nextStep();
+  }
+
+  let steps;
+
+  onMount(() => {
+    document.documentElement.classList.add("js-enhanced");
+    steps = document.querySelectorAll("[data-step]");
+    updateActiveStep();
+  });
+
+  $: if (steps) updateActiveStep();
+
+  function updateActiveStep() {
+    steps.forEach((el, i) => {
+      el.classList.toggle("active", i === currentStep);
+    });
   }
 </script>
 
-<form  method="POST" action="?/submit">
-  <div>
-  {#each questions as question, index}
-    <!-- QuestionSet / fieldsets-->
-    <QuestionSet
-      index={index}
-      currentStep={currentStep}
-      legend={question.legend}
-      name={question.name}
-      options={question.options}
-    />
+<form method="POST" action="?/submit">
+  {#each surveyData as question, index}
+    <fieldset data-step={index} class:active={index === currentStep}>
+      <legend>{question.legend}</legend>
+      {#each question.options as option}
+        <label class="radio-button">
+          <input
+            type="radio"
+            name={question.value}
+            value={option.value}
+            checked={selectedAnswers[index] === option.value}
+            on:change={() => handleSelect(option.value)}
+          />
+          {option.labelText}
+        </label>
+      {/each}
+    </fieldset>
   {/each}
-  </div>
 
-  <div>
-    <button class="curButton" type="button" on:click={prevStep} disabled={currentStep === 0}>
-      Terug</button>
-    <button class="curButton" type="button" on:click={nextStep} disabled={currentStep === questions.length - 1}>
-      Volgende</button>
-    {#if currentStep === questions.length - 1}
+  <div class="form-buttons">
+    <button type="button" on:click={prevStep} disabled={currentStep === 0}>
+      Terug
+    </button>
+
+    <button type="button" on:click={skipQuestion}> Overslaan </button>
+
+    {#if currentStep === surveyData.length - 1}
       <button type="submit">Bekijk uw resultaat</button>
     {/if}
-  </div>
 
-  <button class="submitButton" type="submit">Submit</button>
+    <button type="submit" class="submitButton">Submit</button>
+  </div>
 </form>
 
 <style>
-  form {
-    align-items: center;
-    container-name: form-banner;
-    container-type: inline-size;
+  fieldset {
+    border: none;
+    text-align: start;
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+    width: 300px;
+  }
+
+  legend {
     width: 100%;
-    z-index: 10;
+    display: block;
+    font-size: 20px;
+    font-weight: bolder;
+    line-height: 1.6;
+    font-family: Figtree;
+    text-align: left;
+    padding-left: 0.6em;
+    padding-bottom: 0.8em;
+    max-width: 999px;
+    @media (min-width: 50rem) {
+      font-size: 28px;
+      text-align: center;
+    }
   }
 
-  div:nth-of-type(1) {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    gap: 7.5em;
-    position: relative;
-    text-align: center;
-    width: 100%;
+  label {
+    @media (min-width: 50rem) {
+      min-width: 660px;
+    }
   }
 
-  button {
-    background-color: transparent;
-    border: .1em solid var(--border-grey);
-    border-radius: 1em;
-    color: var(--white);
-    cursor: pointer;
-    font-size:clamp(1rem, 5vw, 1.2rem);
-    padding: 1em 1.5em;
-    width: 9em;
-    transition: all 0.5s ease-in;
-  }
-
-  button:active {
-    background-color: var(--white);
-    border: .1em solid var(--white);
-    color: var(--black);
-  }
-
-  button:hover {
-    background-color: var(--border-grey);
-    border: .1em solid var(--white);
-    color: var(--black);
-  }
-
-  button:focus-within {
-    outline: 3px solid var(--border-pink);
-  }
-
-  .curButton:disabled {
+  input[type="radio"] {
     display: none;
   }
 
-  .submitButton {
-    margin: 5em 0 0 0;
+  .radio-button {
+    display: inline-block;
+    padding: 1rem 1rem;
+    margin: 0.3rem;
+    border: 1px solid rgba(43, 43, 43, 0.56);
+    border-radius: 12px;
+    background-color: rgba(33, 33, 33, 1);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 1rem;
+    user-select: none;
+    text-align: left;
+    line-height: 2;
+    font-weight: lighter;
+    @media (min-width: 50rem) {
+      width: 660px;
+    }
+    &:hover {
+      border-color: #999;
+      background-color: rgba(125, 66, 74, 0.7) 100%;
+    }
   }
 
-  div:nth-of-type(2) {
+  div {
     display: flex;
-    gap: 1em;
-    justify-content: space-evenly;
+    justify-content: center;
+  }
+
+  .radio-button input[type="radio"]:checked,
+  .radio-button:has(input[type="radio"]:checked) {
+    border-color: rgb(168, 168, 168);
+    background-color: #d3d7da;
+    color: rgba(33, 33, 33, 1);
+    font-weight: 600;
+    font-size: 16px;
+  }
+
+  .form-buttons {
+    margin-top: 1em;
+    padding-top: 0.8em;
     width: 100%;
+    /* min-width: 352px; */
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid rgba(33, 33, 33, 1);
   }
 
-  /* media query if script is on */
+  button {
+    color: white;
+    display: inline-block;
+    padding: 20px;
+    margin: 0.5rem;
+    border: 1px solid rgba(43, 43, 43, 0.56);
+    border-radius: 12px;
+    background-color: rgba(33, 33, 33, 1);
+    cursor: pointer;
+  }
+
+  [data-step] {
+    display: block;
+  }
+
+  :global(.js-enhanced) [data-step] {
+    display: none;
+  }
+
+  :global(.js-enhanced) [data-step].active {
+    display: block;
+  }
+
   @media (scripting: enabled) {
-    .submitButton { display: none; }
-    div:nth-of-type(1) {
-      height: 40em;
+    .submitButton {
+      display: none;
     }
-    @container form-banner (width > 22em) {
-      div:nth-of-type(1) { 
-        height: 32em;
-      }
-      div:nth-of-type(2) {
-        gap: 2em;
-      }
-    }
-
-    @container form-banner (width > 40em) {
-      div:nth-of-type(1) { 
-        height: 25em;
-      }
-      div:nth-of-type(2) {
-        gap: 4em;
-      }
-    }
-  }
-
-  /* media query if script is off */
-  @media (scripting: none) {
-    .curButton { display: none; }
   }
 </style>

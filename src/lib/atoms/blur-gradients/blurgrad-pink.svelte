@@ -29,16 +29,25 @@
         transform: scale(2);
     }
 
-    @keyframes bg-gradient {
-        25% { transform: scale(1.2); }
-        50% { transform: scale(1.1); }
-        75% { transform: scale(1.2); }
-    }
+  .blurred-image.form-page {
+    transform: scale(2);
+  }
 
-
-    @media (prefers-reduced-motion) {
-        .blurred-image.form-page  {
-            animation: none; 
-        }
+  @keyframes bg-gradient {
+    25% {
+      transform: scale(1.2);
     }
+    50% {
+      transform: scale(1.1);
+    }
+    75% {
+      transform: scale(1.2);
+    }
+  }
+
+  @media (prefers-reduced-motion) {
+    .blurred-image.form-page {
+      animation: none;
+    }
+  }
 </style>

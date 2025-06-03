@@ -1,0 +1,222 @@
+[
+  {
+    "name": "question1",
+    "legend": "Hoe voelt de realiteit van het verlies voor jou?",
+    "options": [
+      {
+        "value": "f1-i-1",
+        "labelText": "Het voelt nog steeds onwerkelijk, ik heb moeite te geloven dat het echt is gebeurd."
+      },
+      {
+        "value": "f1-i-2",
+        "labelText": "Ik ben dagelijks bezig met het verlies en het brengt veel verdriet met zich mee."
+      },
+      {
+        "value": "f1-i-3",
+        "labelText": "Ik probeer mijn leven opnieuw in te richten, maar het is een uitdaging."
+      },
+      {
+        "value": "f1-i-4",
+        "labelText": "Ik begin langzaam manieren te vinden om verder te gaan zonder de persoon die ik verloren heb."
+      }
+    ]
+  },
+  {
+    "name": "question2",
+    "legend": "Wat helpt je het meest op dit moment?",
+    "options": [
+      {
+        "value": "f2-i-1",
+        "labelText": "Ik heb moeite om te weten wat ik nodig heb of hoe ik hulp kan vragen."
+      },
+      {
+        "value": "f2-i-2",
+        "labelText": "Het delen van mijn verdriet met anderen, zelfs als het zwaar is, helpt me."
+      },
+      {
+        "value": "f2-i-3",
+        "labelText": "Praktische steun in mijn dagelijks leven om me te helpen aan te passen aan de nieuwe realiteit"
+      },
+      {
+        "value": "f2-i-4",
+        "labelText": "Het aangaan van nieuwe verbindingen en het vinden van een nieuw ritme in mijn leven."
+      }
+    ]
+  },
+  {
+    "name": "question3",
+    "legend": "Hoe ziet je dagelijkse routine eruit sinds het verlies?",
+    "options": [
+      {
+        "value": "f3-i-1",
+        "labelText": "Er is niet veel anders, alleen heb ik minder energie."
+      },
+      {
+        "value": "f3-i-2",
+        "labelText": "Ik merk dat ik mijn emoties vaker inhoud omdat ik mijn omgeving er niet mee lastig wil vallen. "
+      },
+      {
+        "value": "f3-i-3",
+        "labelText": "Langzaam maar zeker vind ik een nieuwe structuur en weet ik wat ik kan doen op moeilijke momenten."
+      },
+      {
+        "value": "f3-i-4",
+        "labelText": "Ik probeer betekenis te geven aan mijn herinneringen terwijl ik verder ga."
+      }
+    ]
+  },
+  {
+    "name": "question4",
+    "legend": "Hoe gaat het met je eet en slaapgewoontes?",
+    "options": [
+      {
+        "value": "f4-i-1",
+        "labelText": "Ik slaap en eet veel minder goed, en/of ik voel me soms overweldigd."
+      },
+      {
+        "value": "f4-i-2",
+        "labelText": "Mijn eet- en slaapgewoontes zijn onregelmatig maar ik probeer structuur te vinden."
+      },
+      {
+        "value": "f4-i-3",
+        "labelText": "Eten en slapen gaat weer beter, ik probeer zo goed mogelijk voor mezelf te zorgen."
+      },
+      {
+        "value": "f4-i-4",
+        "labelText": "Ik slaap en eet wel weer goed, (bijna) zoals vlak voor het verlies."
+      }
+    ]
+  },
+  {
+    "name": "question5",
+    "legend": "Hoe vaak denk je aan de persoon die je bent verloren?",
+    "options": [
+      {
+        "value": "f5-i-1",
+        "labelText": "Heel vaak, ik voel de pijn bijna constant."
+      },
+      {
+        "value": "f5-i-2",
+        "labelText": "Vaak, maar ik probeer nieuwe manieren te vinden om mijn leven aan te passen."
+      },
+      {
+        "value": "f5-i-3",
+        "labelText": "Ik heb manieren gevonden om te gaan met de herinneringen maar soms overvallen ze me nog."
+      },
+      {
+        "value": "f5-i-4",
+        "labelText": "Regelmatig, en ik voel me langzaam comfortabeler met de herinneringen."
+      }
+    ]
+  },
+   {
+    "name": "question6",
+    "legend": "Hoe ga je om met sociale situaties sinds het verlies?",
+    "options": [
+      {
+        "value": "f6-i-1",
+        "labelText": "Ik negeer het verlies en probeer gewoon mee te gaan met anderen."
+      },
+      {
+        "value": "f6-i-2",
+        "labelText": "Ik vind het moeilijk om me goed te voelen in gezelschap."
+      },
+      {
+        "value": "f6-i-3",
+        "labelText": "Het lukt me steeds meer mijn rol te vinden zonder de persoon erbij."
+      },
+      {
+        "value": "f6-i-4",
+        "labelText": "Ik probeer open te zijn over wat ik heb meegemaakt en dat een plek te geven."
+      }
+    ]
+  },
+  {
+    "name": "question7",
+    "legend": "Hoe beïnvloedt het verlies je relaties met andere?",
+    "options": [
+      {
+        "value": "f7-i-1",
+        "labelText": "Ik merk dat ik het vaak over het verlies wil hebben maar dat mijn omgeving daar niet altijd (meer) zin in heeft. Ze proberen me af te leiden."
+      },
+      {
+        "value": "f7-i-2",
+        "labelText": "Ik voel me erg kwetsbaar en reageer sneller emotioneel."
+      },
+      {
+        "value": "f7-i-3",
+        "labelText": "Ik merk dat ik zoek naar een nieuw evenwicht in mijn relaties met anderen."
+      },
+      {
+        "value": "f7-i-4",
+        "labelText": "Ik kan open met anderen praten over de invloed van het verlies op mijn leven."
+      }
+    ]
+  },
+  {
+    "name": "question8",
+    "legend": "Wat doe je wanneer je geconfronteerd wordt met herinneringen aan de persoon die je bent verloren?",
+    "options": [
+      {
+        "value": "f8-i-1",
+        "labelText": "Ik vermijd herinneringen zoveel mogelijk, het voelt nog te pijnlijk."
+      },
+      {
+        "value": "f8-i-2",
+        "labelText": "Soms zoek ik herinneringen op, maar vaak maken ze me erg emotioneel."
+      },
+      {
+        "value": "f8-i-3",
+        "labelText": "Ik kan beter omgaan met herinneringen en probeer ze een plek te geven in mijn leven."
+      },
+      {
+        "value": "f8-i-4",
+        "labelText": "Herinneringen voelen steeds meer als iets waardevols en ik koester ze zonder overweldigd te raken."
+      }
+    ]
+  },
+  {
+    "name": "question9",
+    "legend": "Hoe kijk je naar jezelf en je eigen identiteit sinds het verlies?",
+    "options": [
+      {
+        "value": "f9-i-1",
+        "labelText": "Ik voel me nog erg verloren en weet niet goed wie ik ben zonder hen."
+      },
+      {
+        "value": "f9-i-2",
+        "labelText": "Ik worstel met mijn identiteit, het verlies heeft me veranderd en ik zoek naar een nieuwe balans."
+      },
+      {
+        "value": "f9-i-3",
+        "labelText": "Ik begin mijn eigen kracht te herontdekken en zoek manieren om mezelf opnieuw te definiëren."
+      },
+      {
+        "value": "f9-i-4",
+        "labelText": "Ik voel dat het verlies een deel van mij is geworden, maar ik kan verder groeien als persoon."
+      }
+    ]
+  },
+  {
+    "name": "question10",
+    "legend": "Hoe voel je je over de toekomst zonder de persoon die je bent verloren?",
+    "options": [
+      {
+        "value": "f10-i-1",
+        "labelText": "Ik kan me nog niet echt voorstellen dat ze er niet meer zijn."
+      },
+      {
+        "value": "f10-i-2",
+        "labelText": "Ik voel een grote leegte en het doet veel pijn."
+      },
+      {
+        "value": "f10-i-3",
+        "labelText": "Ik merk dat ik weer lichtpuntjes zie en manieren vindt om het zonder hen te doen."
+      },
+      {
+        "value": "f10-i-4",
+        "labelText": "Ik probeer vooruit te kijken en geef ze een speciale plek in mijn leven."
+      }
+    ]
+  }
+]
