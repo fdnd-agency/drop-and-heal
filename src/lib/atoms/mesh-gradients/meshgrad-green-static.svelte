@@ -1,4 +1,4 @@
-<img src="/gradients/Meshgrad-green.png" alt="" width="100" height="100" />
+<img src="/gradients/Meshgrad-green.webp" alt="" width="100" height="100" />
 
 <style> 
     img {

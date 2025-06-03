@@ -1,142 +1,147 @@
 <script>
-  import {HeaderIntro, BlurgradPink} from "$lib";
+  import {ArrowL, NavButtons} from "$lib";
+
+  let innerWidth;
 </script>
 
+<svelte:window bind:innerWidth />
 <main>
-  <HeaderIntro
-    headerText_l1="Hulp op maat, of"
-    headerText_l2="liever zelf kiezen?"
-    progressValue={90}
-  />
+  <section class="introduction-help">
+    <a href="/introductie-rouwtaken/4" aria-label="Go back"><ArrowL/></a>
+    <header>
+      <h1>Hulp op maat, of liever zelf kiezen?</h1>
+      <p> Nu je meer weet over de rouwtaken, is het tijd om jouw persoonlijke reis te starten. Iedereen rouwt op zijn eigen manier. Daarom helpen we je graag kiezen wat op dit moment het beste bij jou past.</p>
+    </header>
+    <section>
+      <article>
+        <h2>Wil je persoonlijk advies?</h2>
+        <p>Beantwoord een paar korte vragen, dan laten we je zien waar je het beste kunt beginnen. Zo weet je zeker dat je start op een plek waar jij nu het meeste aan hebt.</p>
+        <div class="">
+          <p>Aanbevolen keuze</p>
+          <a href="/form-intro">Vragenlijst</a>
+        </div>
+      </article>
+      <article>
+        <h2>Liever zelf kiezen waar je start?</h2>
+        <p>Voel je je al zeker over wat je nodig hebt? Blader dan rustig door de rouwtaken en kies zelf de taak die op dit moment het meest aansluit bij jouw gevoel of situatie.</p>
+        <a href="/multiple-task-1">Zelf kiezen</a>
+      </article>
+    </section>
 
-  <section class="intro-content">
-    <article>
-      <h2>Persoonlijke reis</h2>
-      <p>
-        Nu je meer weet over de rouwtaken zelf, is het tijd om jouw persoonlijke
-        reis te samen te stellen.<br /><br />
-        Rouw is een uniek proces en niet lineair, daarom bieden we ondersteuning
-        om je verder te helpen.
-      </p>
-    </article>
-    <article>
-      <h2>Ontmoet Yana</h2>
-      <p>
-        Maak kennis met Yana, jouw persoonlijke digitale hulp. Yana is getraind
-        met informatie uit een breed scala literatuur over rouw.<br /><br />
-        Yana kan je voorzien van een programma dat bij jou aansluit.
-      </p>
-    </article>
-    <article>
-      <h2>Jouw keuze</h2>
-      <p>
-        Als Yana iets vraagt wat je liever niet beantwoordt, is dat helemaal
-        oké. Je kunt vragen overslaan wanneer jij dat wilt, je hoeft dit alleen
-        maar aan te geven.<br /><br />
-        Liever zelf kiezen waar je start? Dat is ook mogelijk. Kies hieronder dan
-        voor je eigen pad. Je kan op elk moment schakelen tussen de verschillende
-        rouwtaken.<br /><br />
-        Jouw reis, jouw tempo.
-      </p>
-    </article>
+    {#if innerWidth >= 1024}
+      <NavButtons 
+        leftLink="/introductie-rouwtaken/4"
+        rightLink=""
+        />
+    {/if}
   </section>
-
-  <BlurgradPink pageStyle="intro_algemeen" />
-
-  <div class="intro-buttons">
-    <div class="nav-buttons">
-      <button>
-        <a href="./multiple-task-1" class="nav-link">Eigen pad</a>
-      </button>
-      <button>
-        <a href="./form-intro" class="nav-link">Gepersonaliseerd</a>
-      </button>
-    </div>
-  </div>
 </main>
 
 <style>
-  main {
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    min-block-size: 100dvh;
-    gap: 2rem;
-    align-items: center;
-    color: var(--white);
-    background-color: var(--black);
-    width: 100%;
-    min-height: 100vh;
-    overflow: hidden;
-    position: relative;
-    padding: 2rem;
-  }
-
-  .intro-content {
-    display: grid;
-    grid-template-columns: 1fr;
-    justify-items: center;
-    @media (min-width: 50rem) {
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
-      padding: 5rem 2rem 0rem 2rem;
-    }
-    @media (min-width: 65rem) {
-      gap: 3rem;
-    }
-  }
-
-  article {
-    padding: 2rem;
-    max-width: 35rem;
-    min-width: 14rem;
+  .introduction-help {
     display: flex;
     flex-direction: column;
-    @media (min-width: 50rem) {
-      padding: 1rem;
-      max-width: 24rem;
+    gap: 2.5rem;
+    padding-block: 1.25rem;
+    max-width: 720px;
+    margin-inline: auto;
+
+    @media (min-width: 1024px) {
+      height: 100vh;
+      justify-content: center;
+    }
+
+    > a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 3rem;
+      height: 3rem;
+      background-color: #232323;
+      border: 1px solid #2E2E2E;
+      border-radius: 0.75rem;
+      @media (min-width: 1024px) {
+        display: none;
+      }
+    }
+    
+    header {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      @media (min-width: 1024px) {
+        text-align: center;
+      }
+
+      h1 {
+        font-size: clamp(32px, 1.527vw + 26px, 48px);
+      }
+
+      p {
+        @media (min-width: 1024px) {
+          padding-inline: 3rem;
+      }
+      }
+    }
+    > section {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      @media (min-width: 1024px) {
+        flex-direction: row;
+      }
+    article {
+      display: flex;
+      flex-direction: column;
+      gap: 1.75rem;
+      padding: 1.5rem;
+      border-radius: 0.75rem;
+      background-color: #232323;
+      border: 1px solid #2E2E2E;
+
+      h2 {
+        font-size: 1.25rem;
+      }
+    }
+    article:first-of-type {
+      div {
+        margin-top: 1rem;
+        p {
+          font-style: italic;
+        }
+        a {
+          display: inline-block;
+          width: 100%;
+          padding: 1rem 1rem;
+          background-color: var(--white);
+          border-radius: 0.75rem;
+          color: #1D1D1D;
+          font-weight: bold;
+          text-align: center;
+          text-decoration: none;
+          margin-top: 0.5rem;
+        }
+      }
+    }
+
+    article:last-of-type {
+      a {
+        display: inline-block;
+        width: 100%;
+        padding: 1rem 1rem;
+        background-color: #474747;
+        border-radius: 0.75rem;
+        color: inherit;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        margin-top: 1rem;
+
+        @media (min-width: 1024px) {
+          margin-top: auto;
+        }
+      }
     }
   }
-
-  .nav-buttons {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    gap: 1rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .nav-buttons button {
-    padding: 1rem;
-    background: none;
-    border-radius: 50px;
-    border: 1px solid var(--white);
-    white-space: nowrap;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition:
-      background-color 0.3s,
-      color 0.3s,
-      border-color 0.3s;
-  }
-
-  .nav-buttons button:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-  }
-
-  .nav-buttons button:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-  }
-
-  .nav-link {
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    color: var(--white);
-  }
+}
 </style>

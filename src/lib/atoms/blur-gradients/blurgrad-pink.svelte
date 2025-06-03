@@ -1,40 +1,36 @@
-<script>
-  // import { page } from '$app/stores';
-  export let pageStyle = "default";
-  export let customStyles = {};
+<script>  
+    export let pageStyle = 'default';
+    export let customStyles = {};
 </script>
 
-<div class={`blurred-image ${pageStyle}`} style={customStyles}></div>
-
+<div
+    class={`blurred-image ${pageStyle}`}
+    style="{customStyles}" >
+</div>
+ 
 <style>
-  .blurred-image {
-    background-image: radial-gradient(
-      circle,
-      rgba(125, 66, 74, 0.7) 0%,
-      rgba(125, 66, 74, 0) 100%
-    );
+    .blurred-image {
+        background: linear-gradient(
+            to right,
+            rgba(108, 85, 68, 1) 36%,
+            rgba(119, 64, 75, 1) 55%,
+            rgba(108, 85, 68, 1) 100%
+        );
+        position: absolute;
+        width: 30%;
+        height: 100%;
+        filter: blur(150px);
+        z-index: -1;
+        overflow: hidden;
+    }
 
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    z-index: 1;
-    filter: blur(100px);
-    border-radius: 50%;
-  }
 
-  .blurred-image::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 100%;
-    filter: blur(200px);
-    z-index: 0;
-  }
+    .blurred-image.form-page {
+        transform: scale(2);
+    }
 
   .blurred-image.form-page {
     transform: scale(2);
-    /* animation: bg-gradient 10s linear infinite; */
   }
 
   @keyframes bg-gradient {
