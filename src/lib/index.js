@@ -18,11 +18,12 @@ export { default as ArrowL } from './atoms/arrow-l.svelte'
 export { default as ArrowR } from './atoms/arrow-r.svelte'
 export { default as NavIcons } from './atoms/icons-nav.svelte'
 export { default as QuestionOption } from './atoms/question-option.svelte'
-
+export { default as GriefTaskCard } from './atoms/grief-task-card.svelte'
 // Molecules
 export { default as NavButtons } from './molecules/NavButtons.svelte'
 export { default as QuestionSet } from './molecules/question-set.svelte'
 export { default as MeshgradCarousel } from './molecules/meshgrad-carousel.svelte'
+export { default as GriefTaskCarousel } from './molecules/grief-task-carousel.svelte'
 
 // Organisms
 export { default as QuestionForm } from './organism/question-form.svelte'

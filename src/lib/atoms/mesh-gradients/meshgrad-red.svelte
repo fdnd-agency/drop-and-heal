@@ -19,10 +19,4 @@
       transform: scale(1.1);
     }
   }
-
-  @media (min-width: 875px) {
-    img {
-      height: 10em;
-    }
-  }
 </style>

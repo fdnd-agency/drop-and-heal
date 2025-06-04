@@ -1,8 +1,9 @@
 <script>
     import {ArrowL, ArrowR} from "$lib";
-
+    
     export let leftLink = "#"; 
     export let rightLink = "#"; 
+    export let variant = '';
 
     $: layoutClass =
         leftLink && rightLink
@@ -12,9 +13,15 @@
             : rightLink
             ? 'right-only'
             : '';
+
+    $: visibilityClass = variant === 'mobile'
+        ? 'show-mobile'
+        : variant === 'desktop'
+        ? 'show-desktop'
+        : '';
 </script>
 
-<div class="nav-buttons {layoutClass}">
+<div class="nav-buttons {layoutClass} {visibilityClass}">
     {#if leftLink}
         <a href={leftLink} class="nav-link">
             <ArrowL /> <span></span> Terug
@@ -91,5 +98,19 @@
     .nav-buttons a:disabled {
         opacity: 0.5;
         cursor: not-allowed;
+    }
+
+    
+    .show-desktop {
+        display: none;
+    }
+
+    @media (min-width: 1024px) {
+        .show-mobile {
+            display: none;
+        }
+        .show-desktop {
+            display: flex;
+        }
     }
 </style>
