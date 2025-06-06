@@ -2,8 +2,8 @@
 
 Grief is a deeply personal and often complex experience that varies from person to person. Drop & Heal aims to provide a personalized support program for young adults who have experienced grief. By using an analysis, the program adapts to the unique needs of every user, and can identify the specific grief task the user needs and provide the desired help.
 
+<img width="912" alt="image" src="https://github.com/user-attachments/assets/73b121a0-b23d-4f08-a957-744ef5aa138f" />
 
-<img width="207" alt="image" src="https://github.com/user-attachments/assets/ecdb0371-fedf-47bb-8410-e7632e3baeec" /><img width="700" alt="image" src="https://github.com/user-attachments/assets/cdab8661-fea7-4bc6-9b4a-4487539bbc8e" />
 
 Livelink: [Drop & Heal](https://dropandheal.agency.fdnd.nl/)
 
