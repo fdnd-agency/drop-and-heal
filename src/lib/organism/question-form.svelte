@@ -4,6 +4,15 @@
 
   let currentStep = 0;
   let selectedAnswers = Array(surveyData.length).fill(undefined);
+  let steps;
+
+  onMount(() => {
+    document.documentElement.classList.add("js-enhanced");
+    steps = document.querySelectorAll("[data-step]");
+    updateActiveStep();
+  });
+
+  $: if (steps) updateActiveStep();
 
   function prevStep() {
     if (currentStep > 0) {
@@ -26,16 +35,6 @@
     selectedAnswers[currentStep] = optionValue;
     nextStep();
   }
-
-  let steps;
-
-  onMount(() => {
-    document.documentElement.classList.add("js-enhanced");
-    steps = document.querySelectorAll("[data-step]");
-    updateActiveStep();
-  });
-
-  $: if (steps) updateActiveStep();
 
   function updateActiveStep() {
     steps.forEach((el, i) => {
@@ -112,7 +111,8 @@
   }
 
   input[type="radio"] {
-    display: none;
+    opacity: 0;
+    position: absolute;
   }
 
   .radio-button {
@@ -134,7 +134,10 @@
     }
     &:hover {
       border-color: #999;
-      background-color: rgba(125, 66, 74, 0.7) 100%;
+    }
+    &:focus {
+      outline: none;
+      border-color: orange;
     }
   }
 
@@ -156,14 +159,13 @@
     margin-top: 1em;
     padding-top: 0.8em;
     width: 100%;
-    /* min-width: 352px; */
     display: flex;
     justify-content: space-between;
     border-top: 1px solid rgba(33, 33, 33, 1);
   }
 
   button {
-    color: white;
+    color: var(--white);
     display: inline-block;
     padding: 20px;
     margin: 0.5rem;
