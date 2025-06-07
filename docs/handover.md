@@ -1,6 +1,6 @@
 # Handover Drop & Heal 🩵
 
-Dit bestand bevat informatie over het voortzetten van het Drop & Heal project. Grief is a deeply personal and often complex experience that varies from person to person. Drop & Heal aims to provide a personalized support program for young adults who have experienced grief. By using an analysis, the program adapts to the unique needs of every user, and can identify the specific grief task the user needs and provide the desired help.
+Dit bestand bevat informatie over het voortzetten van het Drop & Heal project. Verdriet en rouw zijn diep persoonlijke en vaak complexe ervaringen die per persoon sterk kunnen verschillen. Drop & Heal heeft als doel een persoonlijk ondersteuningsprogramma te bieden voor jongvolwassenen die met verlies te maken hebben gehad. Door middel van een analyse past het programma zich aan de unieke behoeften van elke gebruiker aan, en kan het identificeren welke specifieke rouwtaak op dat moment centraal staat, om vervolgens passende ondersteuning te bieden.
 
 ## Huidige status
 
