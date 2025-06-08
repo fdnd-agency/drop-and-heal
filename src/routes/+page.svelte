@@ -1,5 +1,5 @@
 <script>
-    import { NavButtons, MeshgradCarousel} from '$lib';
+    import {MeshgradCarousel} from '$lib';
 
     
 </script>

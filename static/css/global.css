@@ -8,9 +8,29 @@
   --rt-4: #b264ff;
   --progress-bg: #595959;
 
-  /* borders */
   --border-grey: rgba(255, 255, 255, 0.75);
   --border-pink: rgb(236, 113, 222);
+
+  --border-radius-xs: 0.25rem;
+  --border-radius-sm: 0.5rem;
+  --border-radius-md: 1rem;
+  --border-radius-lg: 2rem;
+
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+  --spacing-lgx: 3rem;
+  --spacing-xl: 4rem;
+  --spacing-xlx: 6rem;
+  --spacing-xxl: 8rem;
+  --spacing-xxxl: 16rem;
+
+  --letter-sp-3: -0.03em;
+  --letter-sp-4: -0.04em;
+  --letter-sp-5: -0.05em;
+  --letter-sp-6: -0.06em;
+  --letter-sp-7: -0.07em;
 }
 
 @font-face {
@@ -108,7 +128,11 @@ p {
   z-index: 100;
 }
 
+@view-transition {
+  navigation: auto;
+}
+
 ::view-transition-old(root),
 ::view-transition-new(root) {
-  animation-duration: 1s;
+  animation-duration: 0.5s;
 }
